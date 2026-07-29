@@ -1,0 +1,2031 @@
+/* ==========================
+   全体の基本設定
+========================== */
+body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* ==========================
+   ヘッダーのデザイン
+========================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 56px; 
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    position: relative; 
+    z-index: 10; /* 他の要素より手前に表示 */
+}
+
+.logo img {
+    display: block;
+    max-height: 40px; 
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px; /* メニュー同士の間隔 */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* ==========================
+   お問い合わせボタン
+========================== */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8b0000; 
+    color: #ffffff !important; 
+    text-decoration: none;     
+    font-size: 14px;           
+    font-weight: normal;       
+    padding: 8px 16px;         
+    box-sizing: border-box;
+}
+
+.mail-icon {
+    display: block;
+    height: 14px;  
+    width: auto;   
+    margin-left: 10px; /* 文字とアイコンの間の余白 */
+}
+/* メインビジュアル全体の配置 */
+
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 640px; 
+    overflow: hidden;
+    background-color: #8b0000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    text-align: left; 
+    color: #fff;
+    
+    /* ★追加：パディングを含めて幅を100%以内に自動計算させる */
+    box-sizing: border-box; 
+    
+    /* ★左の余白を padding ではなく、内側のコンテンツ（.hero-content）に持たせるか、
+       あるいは padding-left をそのまま活かすなら box-sizing が必須になります */
+    padding-left: 96px; 
+
+    /* ★中央寄せにするためのマージン */
+    margin: 0 auto;
+}
+
+/* 画像の設定 */
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center center;
+    z-index: 0;
+}
+
+/* テキスト全体のコンテナ */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: left; /* 中身のテキストも確実に左揃えにする */
+}
+
+/* 英語タイトル */
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 80px;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    line-height: 1.1; /* タイトルの改行幅を詰める */
+}
+
+/* 日本語のサブコピー部分 */
+.hero-subtext {
+    font-size: 16px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 1.8;
+    margin: 0;
+    text-align: left; /* 左揃えにする */
+}
+/* 制作実績セクション全体に左右160pxの余白を設定 */
+.works-section {
+    width: 100%;
+    padding: 60px 160px; /* ★ 上下60px、左右160pxの余白 */
+    background-color: #fff;
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+}
+
+/* 赤い見出しの帯（セクション幅＝余白の内側に収まる） */
+.section-title-bg {
+    width: 100%;
+    height: 100px;
+    
+    /* 背景画像のパス */
+    background-image: url('images/images/obi.png'); 
+    background-size: cover; 
+    background-position: center center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 120px;
+    
+    margin-bottom: 56px; /* 帯の下のスペース */
+}
+
+/* 赤い見出しの帯の中の文字 */
+.section-title-bg h2 {
+    font-family: 'Post No Bills Colombo', sans-serif; /* 読み込んだフォントを指定 */
+    font-weight: 400; /* Regularの太さ */
+    font-size: 32px; /* Figma通りのサイズ */
+    color: #fff;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+/* ヘッダー全体のスタイル */
+header, .header, .site-header {
+    position: relative;
+    width: 100%;
+    max-width: 1440px; /* メインビジュアルと同じ最大幅にする */
+    margin: 0 auto;    /* 中央寄せ */
+    display: flex;
+    justify-content: space-between; /* 左右に要素を綺麗に配置する */
+    align-items: center;
+    padding: 20px 40px; /* 左右に適度な余白を持たせる */
+    box-sizing: border-box;
+}
+
+/* もしヘッダーを固定（fixed）している場合はこちら */
+
+header, .header, .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px; /* 画面の端から少し内側に引っ込める */
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+/* 作品リスト全体 */
+.works-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* カード同士の間隔 */
+}
+
+/* 1つの作品カード（左右並び） */
+.work-card {
+    display: flex;
+    gap: 40px; /* 画像とテキストの間隔 */
+    align-items: center;
+}
+
+/* 左側の画像エリア */
+.work-image {
+    width: 50%; /* 幅の半分を占める */
+    flex-shrink: 0;
+}
+
+.work-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 右側の情報エリア */
+.work-info {
+    width: 50%;
+}
+
+/* カテゴリ（Webサイト） */
+.work-category {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+/* タイトル */
+.work-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+/* 説明文 */
+.work-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+/* タグのリスト */
+.work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+.work-tags li {
+    font-size: 11px;
+    color: #444;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+/* サイトを見るボタン */
+.work-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+    border: 1px solid #333;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.work-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+/* 制作実績セクション全体（または作品リストを囲むコンテナ） */
+.works-section {
+    width: 100%;
+    padding: 60px 160px; /* ★ 上下60px、左右160pxの余白を設定 */
+    background-color: #fff;
+    box-sizing: border-box; /* パディングを含めて幅を計算する */
+}
+/* 作品リスト全体、またはカードを囲む部分に左右160pxの余白を入れる */
+.works-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* カード同士の間隔 */
+    padding: 0 160px; /* ★ここに左右160pxの余白を追加 */
+    box-sizing: border-box; /* 幅の計算にパディングを含める */
+}
+.works-container {
+    width: 100%;
+    padding: 0 160px; /* ★ここでまとめて左右160pxの余白を作る */
+    box-sizing: border-box;
+}
+/* サイトを見るボタン（元の形に影だけ追加） */
+.work-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between; /* 文字と矢印を左右に分ける場合 */
+    gap: 10px;
+    padding: 10px 24px;
+    border: 1px solid #333;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+    
+    /* ★ここを追加：Figmaのようなふんわりした影をつける */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08); 
+}
+
+.work-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+/* 影をつけるスタイル */
+.shadow-btn {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+/* 画像エリアの親を基準にするために相対位置にする */
+.work-image {
+    position: relative;
+    width: 50%; 
+    flex-shrink: 0;
+}
+
+.work-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ★画像の上に重ねるエリアのCSS */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 縦方向の中央揃え（必要に応じて調整） */
+    padding-left: 40px;      /* 左からの余白 */
+    box-sizing: border-box;
+    color: #ffffff;          /* 文字色を白に */
+}
+
+/* 「All Works」の文字 */
+.banner-sub {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+/* 「すべての色彩と、不協和音。」の文字 */
+.banner-main {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 「作品一覧を見る」のボタン風リンク */
+.banner-btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+/* 作品タイトルの文字サイズを20pxに固定する */
+.work-title {
+    font-size: 20px !important; /* 他のスタイルに負けないようにする */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+/* --- 共通のスタイルはそのままお使いください --- */
+
+/* 【修正】画像エリア：文字を重ねるために相対位置にする */
+.work-image {
+    position: relative;
+    width: 50%; 
+    flex-shrink: 0;
+}
+
+.work-image img {
+    width: 100%;
+    height: auto;
+    display: block; /* 下の隙間を消す */
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 【追加・修正】画像の上に重ねるエリアのCSS */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 縦方向の中央揃え */
+    padding-left: 40px;      /* 左からの余白 */
+    box-sizing: border-box;
+    color: #ffffff;          /* 文字色を白に */
+}
+
+/* 【追加】「All Works」の文字（大きく） */
+.banner-sub {
+    font-size: 20px; /* Figmaに合わせて大きく */
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+/* 【追加】「すべての色彩と、不協和音。」の文字（小さく） */
+.banner-main {
+    font-size: 14px; /* Figmaに合わせて小さく */
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+/* 【追加】「作品一覧を見る」のボタン（黒背景に白文字） */
+.banner-btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 10px 24px;
+    background-color: #000000; /* 黒い背景 */
+    color: #ffffff;            /* 白い文字 */
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.banner-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* 【修正】右側のメインタイトル（20pxに固定） */
+.work-title {
+    font-size: 20px !important; /* 他のスタイルに負けないようにする */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+/* 画像内の「作品一覧を見る」ボタンのサイズ指定 */
+.banner-btn {
+    display: flex;             /* 中の文字を中央に配置するため */
+    align-items: center;       /* 縦方向の中央揃え */
+    justify-content: center;   /* 横方向の中央揃え */
+    width: 120px;              /* ★横幅を120pxに指定 */
+    height: 31px;              /* ★高さを31pxに指定 */
+    padding: 0;                /* パディングをリセット */
+    background-color: #ffffff; /* 黒い背景 */
+    color: #000000;            /* 白い文字 */
+    text-decoration: none;
+    font-size: 12px;           /* ボタン内の文字サイズ（必要に応じて調整） */
+    font-weight: bold;
+    border: 1px solid #000000;
+    box-sizing: border-box;    /* 幅・高さにボーダーを含める */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.banner-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+/* 「All Works」のフォントサイズ調整 */
+.banner-sub {
+    font-size: 20px; /* ★ここでお好みの大きさに調整してください */
+    font-weight: bold;
+    margin-bottom: 1px;
+    letter-spacing: 1px;
+}
+
+/* 「すべての色彩と、不協和音。」のフォントサイズ調整 */
+.banner-main {
+    font-size: 14px; /* ★ここでお好みの大きさに調整してください */
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+/* 作品カード全体を囲むコンテナを縦並びにして、間隔を42pxにする */
+.works-container {
+    width: 100%;
+    padding: 0 160px;
+    box-sizing: border-box;
+    
+    /* ★ここを追加して縦並び＆42pxにする */
+    display: flex;
+    flex-direction: column;
+    gap: 42px !important; 
+}
+/* 紫のバナー専用の重ね合わせエリア */
+.pet-banner-overlay {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 縦方向の中央揃え */
+    padding-left: 200px;      /* 左からの余白 */
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+/* 「その一瞬を、色づけて。」 */
+.pet-banner-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+/* 「Pet Illustration & Design」 */
+.pet-banner-sub {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    color: #ffffff;
+}
+
+/* 「制作について詳しく」のボタン */
+.pet-banner-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;              /* ボタンの幅 */
+    height: 36px;              /* ボタンの高さ */
+    background-color: #ffffff; /* 白背景 */
+    color: #000000;            /* 黒文字 */
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pet-banner-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* 紫のバナー専用の重ね合わせエリア（全体） */
+.pet-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* ★中央揃えを解除 */
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;    
+
+    /* ★文字とボタンのブロック全体の位置調整（Figmaに合わせて微調整してください） */
+    padding-top: 100px;  /* 上からの余白 */
+    padding-left: 230px; /* 左からの余白（右への移動） */
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+/* ★文字とボタンをまとめたブロック */
+.pet-text-block {
+    display: flex;
+    flex-direction: column; /* 縦並びにする */
+    gap: 10px;             /* 要素（タイトル・サブ・ボタン）ごとの間隔 */
+    text-align: left;      /* 左揃え */
+}
+
+/* 「その一瞬を、色づけて。」 */
+.pet-banner-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0; /* マージンをリセットしてgapで管理 */
+}
+
+/* 「Pet Illustration & Design」 */
+.pet-banner-sub {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0; 
+    color: #ffffff;
+    margin-bottom: 20px; /* ボタンとの間にさらに余白を入れる場合 */
+}
+
+/* 「制作について詳しく」のボタン */
+.pet-banner-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;              
+    height: 36px;              
+    background-color: #ffffff; 
+    color: #000000;            
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pet-banner-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* プロフィール用のカード（画像を上揃えにする） */
+.profile-card {
+    align-items: flex-start !important; 
+}
+
+/* プロフィール名（永嶋 杏月）のフォントサイズ調整 */
+.profile-name {
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+}
+/* スキルセクション全体の微調整 */
+.skill-section {
+    margin-bottom: 80px; /* 帯の下の大きな余白 */
+}
+
+.skill-container {
+    margin-bottom: 120px; /* セクション全体の終わりの余白 */
+    gap: 40px;            /* スキル項目ごとの間隔 */
+}
+
+/* 「Webサイトデザイン／バナー制作」などのカテゴリ見出し */
+.skill-category-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 24px 0; /* 下のカードとの間隔 */
+    text-align: center;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+/* スキルカードの画像とテキストの配置調整（左右並び） */
+.skill-card {
+    align-items: flex-start !important; /* 上揃え */
+    gap: 30px;                          /* 画像とテキストの間隔 */
+}
+
+/* 画像エリアの幅（Figmaに合わせて少し広げる） */
+.skill-image-wide {
+    width: 40%; /* 画像を少し小さくしてテキストを広くする例 */
+}
+
+/* テキストエリアの幅 */
+.skill-info-wide {
+    width: 60%;
+}
+
+/* スキル項目名（Figma） */
+.skill-item-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+/* スキル説明文 */
+.skill-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+/* 「Webサイトデザイン／バナー制作」「コーディング」の見出しデザイン */
+.skill-category-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #B90F0F;          /* ★Figma通りの赤い文字色に指定 */
+    text-align: center;
+    margin: 60px 0 30px 0;   /* 上下の余白 */
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    
+    /* 両脇のラインを引くためのスタイル */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;               /* 文字と線の間の隙間 */
+}
+
+/* 見出しの両脇に伸びる赤い線 */
+.skill-category-title::before,
+.skill-category-title::after {
+    content: "";
+    flex: 1;                 /* 左右いっぱいに線を伸ばす */
+    height: 2px;             /* 線の太さ */
+    background-color: #B90F0F; /* ★Figma通りの赤い線の色 */
+}
+/* その他ツールの2列×2行グリッド設定 */
+.other-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列に均等配置 */
+    gap: 40px 60px; /* カード同士の縦・横の間隔 */
+    margin-top: 30px;
+}
+
+/* 各ツールカードのデザイン */
+.tool-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* アイコンとツール名が入るヘッダー部分 */
+.tool-header {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* アイコンと名前の間隔 */
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+/* ツールアイコンの大きさ調整 */
+.tool-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* ツール名（Slack, VS Codeなど） */
+.tool-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+/* ツールの説明文 */
+.tool-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+/* ツールアイコンの大きさを 96px に変更 */
+.tool-icon {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+/* その他ツールの2列×2行グリッド設定 */
+.other-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    margin-top: 30px;
+}
+
+/* 各ツールカード（左に画像、右にテキストを配置） */
+.tool-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* 左側のアイコンエリア */
+.tool-icon-area {
+    flex-shrink: 0;
+}
+
+/* アイコンの大きさを96pxに固定 */
+.tool-icon {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+/* 右側のテキストエリア */
+.tool-info-area {
+    flex-grow: 1;
+}
+
+/* ツール名 */
+.tool-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+/* ツールの説明文 */
+.tool-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+/* 各ツールカード（左に画像、右に文字をきれいに並べる） */
+.tool-card {
+    display: flex;
+    flex-direction: row; /* 横並びにする */
+    align-items: flex-start; /* 上揃え */
+    gap: 20px; /* 画像と右側のテキストの間隔 */
+}
+
+/* 左側のアイコンエリアの固定 */
+.tool-icon-area {
+    flex-shrink: 0;
+}
+
+/* アイコンのサイズを96pxに固定 */
+.tool-icon {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+/* 右側のテキストエリア */
+.tool-info-area {
+    flex-grow: 1;
+}
+
+
+
+/* ツール名 */
+.tool-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+/* ツールの説明文 */
+.tool-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+/* ========================================== */
+/* フッター全体のスタイル */
+/* ========================================== */
+.site-footer {
+    margin-top: 100px;
+    width: 100%;
+}
+
+/* 赤い背景のナビゲーション帯 */
+.site-footer .footer-nav-bg {
+    background-color: #B90F0F !important; /* 赤色の背景を強制適用 */
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* メニューを横並びにする */
+.site-footer .footer-links {
+    list-style: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* フッターのリンク文字 */
+.site-footer .footer-links a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* お問い合わせのメール画像サイズ */
+.site-footer .footer-mail-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* 一番下のグレーのコピーライト帯 */
+.site-footer .footer-copyright {
+    background-color: #555555 !important; /* グレーの背景 */
+    text-align: center !important;
+    padding: 16px 0 !important;
+    width: 100% !important;
+}
+
+.site-footer .footer-copyright p {
+    color: #ffffff !important;
+    font-size: 12px !important;
+    margin: 0 !important;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+/* ========================================== */
+/* PC版：ヘッダー全体のレイアウト（Figma再現） */
+/* ========================================== */
+.site-header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1440px; /* メインビジュアルと同じ幅に合わせる */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* 左右に綺麗に配置 */
+    align-items: center;
+    padding: 20px 80px; /* 画面の端から適度な余白を取る */
+    box-sizing: border-box;
+}
+
+/* ロゴのスタイル */
+.logo {
+    margin: 0;
+}
+
+.logo img {
+    display: block;
+    height: 71px; /* Figmaのサイズ感に合わせて調整 */
+    width: auto;
+}
+
+/* PC用のナビゲーションメニュー */
+.header-nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px; /* メニュー同士の間隔 */
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+/* お問い合わせボタン（メニュー内） */
+.header-contact-btn {
+    display: inline-flex !important;
+    align-items: center;
+    background-color: #B90F0F !important;
+    color: #ffffff !important;
+    padding: 8px 16px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.header-contact-btn img.mail-icon {
+    width: 14px;
+    height: auto;
+    margin-left: 6px;
+}
+
+/* PC版ではスマホ用ハンバーガーは非表示 */
+.hamburger-menu {
+    display: none !important;
+}
+/* ========================================== */
+/* PC版：ヘッダーとメインビジュアルを左右いっぱいに広げる修正 */
+/* ========================================== */
+
+/* ヘッダー全体を画面幅いっぱいにする */
+.site-header {
+    width: 100% !important;
+    background-color: #ffffff !important;
+    box-sizing: border-box !important;
+}
+
+/* ヘッダーの中身を左右の端まで広げる（左右の余白を調整） */
+.header-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20px 50px !important; /* 好みに合わせて左右の余白を変更できます */
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+}
+
+/* メインビジュアルも画面幅いっぱいに広げる */
+.hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+/* ========================================== */
+/* PC版：ロゴのサイズをFigma（高さ71px基準）に合わせる */
+/* ========================================== */
+.logo img {
+    height: 71px !important;
+    width: auto !important;
+    max-height: none !important;
+    display: block !important;
+}
+
+/* ヘッダー全体のパディングもロゴの高さに合わせて調整 */
+.header-container {
+    padding: 10px 40px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+/* ========================================== */
+/* ヘッダーを画面トップに固定する */
+/* ========================================== */
+.site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important; /* 他の要素の下に隠れないように最前面にする */
+    background-color: #ffffff !important;
+}
+
+/* ヘッダーが固定されて上の空間が空くため、メインビジュアルにヘッダーの高さ分の余白（または上マージン）を持たせる */
+.hero {
+    margin-top: 90px !important; /* ヘッダーの高さに合わせて調整してください */
+}
+
+/* ========================================== */
+/* スマートフォン用レスポンシブ対応（画面幅599px以下） */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+
+    /* 1. ヘッダーをスマホ用に調整（ロゴとハンバーガーメニュー） */
+    .site-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+        background-color: #ffffff !important;
+        padding: 10px 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .header-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .logo img {
+        height: 32px !important; /* スマホ用ロゴの高さ */
+        width: auto !important;
+    }
+
+    /* PC用メニューを隠し、ハンバーガーメニューを表示 */
+    .header-nav {
+        display: none !important;
+    }
+
+    .hamburger-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 24px !important;
+        height: 16px !important;
+        cursor: pointer !important;
+    }
+
+    .hamburger-menu span {
+        display: block !important;
+        width: 100% !important;
+        height: 2px !important;
+        background-color: #B90F0F !important;
+        border-radius: 2px !important;
+    }
+
+    /* 2. メインビジュアル（スマホ用画像に切り替え & 固定ヘッダー分の余留め） */
+    .hero {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-top: 55px !important; /* 固定ヘッダーの高さ分の余白 */
+        height: 394px !important;
+        background-image: url('images/images/sptop.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+    }
+
+    .hero-img {
+        display: none !important; /* PC用画像を非表示 */
+    }
+
+    .hero-content {
+        position: absolute !important;
+        top: 55% !important;
+        left: 8% !important;
+        transform: translateY(-50%) !important;
+        width: 85% !important;
+        text-align: left !important;
+    }
+
+    .hero h1 {
+        font-size: 40px !important;
+        line-height: 1.1 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .hero-subtext {
+        font-family: "Noto Sans JP", sans-serif !important;
+        font-weight: 900 !important; /* Black（太字） */
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        color: #ffffff !important;
+        
+        /* もう少し下に下げるための調整（必要に応じて数値は微調整してください） */
+        margin-top: 15px !important; 
+    }
+
+    /* 3. 各作品カード・セクションのスマホ縦並び・幅合わせ */
+    .works-container {
+        padding: 0 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .work-card {
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .work-image,
+    .work-info {
+        width: 100% !important;
+    }
+
+    /* 赤いセクションの見出し帯を画面端まで広げる */
+    .works-section {
+        padding: 0 !important;
+        margin: 30px 0 20px 0 !important;
+    }
+
+    .section-title-bg {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        position: relative !important;
+        left: 50% !important;
+        right: 50% !important;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+        height: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .section-title-bg h2 {
+        font-size: 15px !important;
+    }
+
+    /* 4. スキルのその他ツールグリッドをスマホで1列にする */
+    .other-tools-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .tool-card {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* 5. フッターの調整 */
+    .site-footer .footer-links {
+        gap: 15px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+}
+/* ========================================== */
+/* 赤い見出し帯の修正（両端に余白を持たせ、上下に22pxの余白を設定） */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+
+    /* 帯を画面端まで広げる指定を解除し、他のコンテンツと同じコンテナ内に収める */
+    .works-section {
+        padding: 0 15px !important; /* 左右の余白 */
+        margin-top: 22px !important;
+        margin-bottom: 22px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .section-title-bg {
+        width: 100% !important;
+        max-width: 100% !important;
+        position: static !important; /* 画面端からはみ出させる指定をリセット */
+        left: auto !important;
+        right: auto !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        
+        /* 上下の余白（パディング）を22pxに指定 */
+        padding-top: 22px !important;
+        padding-bottom: 22px !important;
+        height: auto !important;
+        
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .section-title-bg h2 {
+        font-size: 15px !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：作品カードの見出しタイトルのサイズ調整 */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    /* クラス名は実際のHTMLに合わせて適宜調整してください（例：.work-info h3 や .work-title など） */
+    .work-info h3,
+    .work-card h3,
+    .work-title {
+        font-size: 14px !important; /* Figmaのサイズ感に合わせて調整 */
+        line-height: 1.4 !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：バナー内のテキストを右揃えにしてFigmaに合わせる */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    
+    /* テキストブロック全体を右揃えに変更 */
+    .pet-text-block {
+        align-items: flex-end !important; /* 右側に寄せる */
+        text-align: right !important; /* テキストを右揃え */
+        transform: translateY(-50px) !important;
+        max-width: 45% !important; /* 幅を整えて犬と被らないようにする */
+    }
+
+    /* タイトルとサブタイトルの調整 */
+    .pet-banner-title {
+        order: 1 !important;
+        font-size: 13px !important;
+        font-weight: bold !important;
+        text-align: right !important;
+        white-space: nowrap !important;
+    }
+
+    .pet-banner-sub {
+        order: 2 !important;
+        font-size: 9px !important;
+        text-align: right !important;
+        white-space: nowrap !important;
+    }
+
+    /* ボタンの位置 */
+    .pet-banner-btn {
+        order: 3 !important;
+        font-size: 10px !important;
+        padding: 5px 12px !important;
+        white-space: nowrap !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：バナー内のボタンの幅とサイズをFigmaに合わせる */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    .pet-banner-btn {
+        display: inline-block !important;
+        width: auto !important;
+        min-width: 130px !important; /* Figmaのボタンのような適度な横幅を確保 */
+        font-size: 10px !important;
+        padding: 6px 12px !important; /* 上下の厚みと左右の余白を調整 */
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：プロフィール（自己紹介）の文字を左揃えにする */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    
+    /* 自己紹介のテキストエリアを指定（クラス名に合わせて適宜調整してください） */
+    .work-info,
+    .about-section,
+    .profile-text,
+    .about-content {
+        text-align: left !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：下線の長さを188pxに固定して統一するCSS */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    
+    /* カード全体のレイアウト */
+    html body div.tool-card {
+        display: block !important;
+        margin-bottom: 35px !important;
+        text-align: left !important;
+    }
+    
+    /* 画像とタイトルを横並びにする箱 */
+    html body div.tool-card div.tool-top-row {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 15px !important;
+        margin-bottom: 15px !important;
+        border: none !important;
+        background: none !important;
+    }
+
+    /* 左側の画像エリア */
+    html body div.tool-card div.tool-top-row div.tool-icon-area {
+        width: 70px !important;
+        min-width: 70px !important;
+        flex: 0 0 70px !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    html body div.tool-card div.tool-top-row div.tool-icon-area img.tool-icon {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    /* 右側のタイトルエリア */
+    html body div.tool-card div.tool-top-row div.tool-header {
+        flex-grow: 1 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    /* タイトル名：下線はここで引かずにリセット */
+    html body div.tool-card div.tool-top-row div.tool-header h4.tool-name {
+        text-align: left !important;
+        font-size: 16px !important;
+        margin: 0 !important;
+        border: none !important;
+        padding-bottom: 0 !important;
+        position: relative !important;
+        display: inline-block !important;
+    }
+
+    /* Figma通りに「幅188pxの赤い線」を擬似要素で正確に引く */
+    html body div.tool-card div.tool-top-row div.tool-header h4.tool-name::after {
+        content: "" !important;
+        position: absolute !important;
+        left: 0 !important;
+        bottom: -6px !important; /* タイトルからの距離 */
+        width: 188px !important;  /* Figma通りの固定幅 */
+        height: 2px !important;   /*線の太さ */
+        background-color: #8E0A0A !important; /* Figma通りのカラーコード */
+    }
+
+    /* 説明文エリア */
+    html body div.tool-card div.tool-info-area {
+        width: 100% !important;
+        text-align: left !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    html body div.tool-card div.tool-info-area p.tool-text {
+        text-align: left !important;
+        margin: 0 !important;
+        font-size: 14px !important;
+        border: none !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：説明文の左右余白を23pxにする設定 */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    html body div.tool-card div.tool-info-area p.tool-text {
+        padding-left: 23px !important;
+        padding-right: 23px !important;
+        box-sizing: border-box !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：カード全体に左右の余白を持たせる設定 */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    html body div.tool-card {
+        padding-left: 23px !important;
+        padding-right: 23px !important;
+        box-sizing: border-box !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：フッターの文字サイズを10pxにする設定 */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    html body footer,
+    html body footer *,
+    html body .footer,
+    html body .footer * {
+        font-size: 10px !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：コピーライトの文字サイズを5pxにする強制指定 */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    html body footer.site-footer div.footer-copyright p {
+        font-size: 5px !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：作品カード内のボタンだけを中央揃えにし、説明文は左揃えに戻す設定 */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    
+    /* 1. 説明文やカテゴリー、タイトルは確実に左揃えにする */
+    html body .work-info,
+    html body .work-info .work-text,
+    html body .work-info .work-title,
+    html body .work-info .work-category {
+        text-align: left !important;
+    }
+
+    /* 2. 「サイトを見る」「バナーを見る」などのボタンだけを中央揃えにする */
+    html body .work-button,
+    html body .banner-btn,
+    html body .pet-banner-btn {
+        display: table !important; /* ボタンの幅に合わせた中央寄せのテクニック */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+}
+/* ========================================== */
+/* スマホ版ヘッダーとお問い合わせボタンの設定 */
+/* ========================================== */
+
+/* 1. PC版ではスマホ用ボタンを非表示にする */
+.header-contact-btn-sp {
+    display: none;
+}
+
+/* 2. スマホ版（画面幅599px以下）のときの本番設定 */
+@media screen and (max-width: 599px) {
+    
+    /* ヘッダーの中身を左右に綺麗に配置する */
+    html body header.site-header div.header-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* ロゴを左側に寄せる */
+    html body header.site-header h1.logo {
+        margin: 0 !important;
+        margin-right: auto !important;
+    }
+
+    html body header.site-header h1.logo img {
+        height: 22px !important;
+        width: auto !important;
+        display: block !important;
+    }
+
+    /* スマホ用のお問い合わせボタンのデザイン（Figma風） */
+    html body header.site-header a.header-contact-btn-sp {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-color: #8E0A0A !important; /* 赤色の背景 */
+        color: #ffffff !important;           /* 白文字 */
+        font-size: 11px !important;          /* 文字サイズ */
+        font-weight: bold !important;
+        padding: 5px 10px !important;        /* ボタンの余白 */
+        text-decoration: none !important;
+        margin-right: 10px !important;       /* ハンバーガーメニューとの隙間 */
+        white-space: nowrap !important;      /* 文字が改行されないようにする */
+    }
+
+    /* ボタン内のメールアイコン */
+    html body header.site-header a.header-contact-btn-sp img.mail-icon {
+        width: 12px !important;
+        height: auto !important;
+        margin-left: 4px !important;
+        filter: brightness(0) invert(1) !important; /* アイコンを白色にする */
+    }
+
+    /* ハンバーガーメニューの見た目と配置 */
+    html body header.site-header div.hamburger-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 22px !important;
+        height: 16px !important;
+        cursor: pointer !important;
+        flex-shrink: 0 !important;
+    }
+}
+/* ========================================== */
+/* スマホ用ハンバーガーメニュー（開いた時のデザイン） */
+/* ========================================== */
+
+/* 普段（閉じている時）はメニューを非表示にする */
+.sp-menu {
+    display: none;
+}
+
+@media screen and (max-width: 599px) {
+    
+    /* ハンバーガーが開いた状態（bodyに .menu-open クラスがついた時を想定） */
+    body.menu-open .sp-menu {
+        display: block !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background-color: #ffffff !important; /* Figma通りの白い背景 */
+        z-index: 9999 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* メニュー内の要素を縦に中央配置する箱 */
+    body.menu-open .sp-menu .sp-menu-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 100% !important;
+        text-align: center !important;
+        padding: 20px !important;
+    }
+
+    /* メニューリスト（制作実績、私について、スキル＆ツール） */
+    body.menu-open .sp-menu .sp-menu-list {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 0 30px 0 !important;
+    }
+
+    body.menu-open .sp-menu .sp-menu-list li {
+        margin-bottom: 25px !important;
+    }
+
+    body.menu-open .sp-menu .sp-menu-list li a {
+        color: #333333 !important;
+        font-size: 18px !important;
+        text-decoration: none !important;
+        font-weight: bold !important;
+    }
+
+    /* お問い合わせボタン（赤背景のボタン） */
+    body.menu-open .sp-menu .sp-menu-contact-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-color: #8E0A0A !important;
+        color: #ffffff !important;
+        font-size: 16px !important;
+        font-weight: bold !important;
+        padding: 12px 30px !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+    }
+
+    body.menu-open .sp-menu .sp-menu-contact-btn img.mail-icon {
+        width: 16px !important;
+        height: auto !important;
+        margin-left: 8px !important;
+        filter: brightness(0) invert(1) !important;
+    }
+}
+/* ========================================== */
+/* スマホ用メニュー：開閉ボタンを常に右上に表示する設定 */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    
+    /* メニューが開いている時、ハンバーガーアイコンを最前面（一番上）に固定する */
+    body.menu-open .hamburger-menu {
+        position: fixed !important;
+        top: 15px !important;
+        right: 15px !important;
+        z-index: 10000 !important; /* メニューの白背景(9999)よりも手前に出す */
+    }
+
+    /* メニューが開いたときのアイコンを「×（バツ印）」っぽく変形させるアニメーション */
+    body.menu-open .hamburger-menu span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg) !important;
+    }
+    body.menu-open .hamburger-menu span:nth-child(2) {
+        opacity: 0 !important;
+    }
+    body.menu-open .hamburger-menu span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg) !important;
+    }
+}
+/* ========================================== */
+/* スマホ用メニュー内のテキストを左揃えにする設定 */
+/* ========================================== */
+@media screen and (max-width: 599px) {
+    
+    /* メニューリスト全体の配置を左寄せにする箱に変更 */
+    body.menu-open .sp-menu .sp-menu-content {
+        align-items: flex-start !important;
+        padding-left: 40px !important; /* 左側の余白の調整（必要に応じて変更してください） */
+    }
+
+    /* 各リンクテキストを左揃えにする */
+    body.menu-open .sp-menu .sp-menu-list {
+        text-align: left !important;
+    }
+}
+/* ========================================== */
+/* その他ツールセクションのFigma再現CSS */
+/* ========================================== */
+
+/* 「その他ツール」見出しのデザイン（両サイドの赤い線） */
+.other-tool-title-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 50px auto 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.other-tool-title-area .line-left,
+.other-tool-title-area .line-right {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #8E0A0A; /* 赤色の線 */
+}
+
+.other-tool-heading {
+    color: #8E0A0A;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 20px;
+    white-space: nowrap;
+}
+
+/* ツールカードをPC版で2列グリッドにする設定 */
+@media screen and (min-width: 600px) {
+    .tools-grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2列に並べる */
+        gap: 30px; /* カード同士の隙間 */
+        max-width: 1000px;
+        margin: 0 auto 60px auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    /* グリッド内に入る各カードの調整 */
+    .tools-grid-container .tool-card {
+        width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
+}
+
+/* スマホ版（画面幅599px以下）のときの表示調整 */
+@media screen and (max-width: 599px) {
+    .tools-grid-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin-bottom: 40px;
+    }
+}
+/* ========================================== */
+/* スキル・ツールセクションのカードを縦1列に並べる修正 */
+/* ========================================== */
+@media screen and (min-width: 600px) {
+    /* グリッドを解除して、1カラム（縦1列）にする */
+    .tools-grid-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important; /* カード同士の縦の隙間 */
+        max-width: 1000px !important;
+        margin: 0 auto 50px auto !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 各カードの幅を100%にして横幅いっぱいに広げる */
+    .tools-grid-container .tool-card {
+        width: 100% !important;
+        max-width: 1000px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+}
+/* ========================================== */
+/* スキルセクションの表示崩れを完全に直すCSS */
+/* ========================================== */
+
+/* 前半（Webサイトデザイン・コーディング）の作品カード風デザインの維持 */
+@media screen and (min-width: 600px) {
+    /* works-container 内にあるカードは、通常の横並び（画像左・テキスト右）に戻す */
+    .works-container .work-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 40px !important;
+        max-width: 1000px !important;
+        margin: 0 auto 40px auto !important;
+        width: 100% !important;
+    }
+
+    .works-container .work-card .work-image {
+        flex: 0 0 45% !important;
+        max-width: 45% !important;
+    }
+
+    .works-container .work-card .work-info {
+        flex: 1 !important;
+    }
+
+    /* 最後の「その他ツール」部分だけを2列グリッドにする設定 */
+    .tools-grid-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+        max-width: 1000px !important;
+        margin: 0 auto 50px auto !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .tools-grid-container .tool-card {
+        width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
+/* ========================================== */
+/* スキル・ツールカードのタイトル下の線に関する設定 */
+/* ========================================== */
+
+/* 1. 前半の作品カード・前半のスキルカード用（グレーの線） */
+.work-card .work-title {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 15px;
+}
+
+/* 2. 最後の「その他ツール」専用（赤色の線・文字幅に合わせる） */
+.tools-grid-container .tool-card .tool-name {
+    padding-bottom: 8px !important;
+    border-bottom: 2px solid #8E0A0A !important; /* 赤い線のみにする */
+    border-top: none !important;
+    display: inline-block !important;
+    margin-bottom: 15px !important;
+    width: 416px !important;
+}
+/* ========================================== */
+/* PC表示のときだけその他ツールの線を416px固定にする */
+/* ========================================== */
+@media screen and (min-width: 600px) {
+    .tools-grid-container .other-tool-name {
+        display: inline-block !important;
+        position: relative !important;
+        padding-bottom: 8px !important;
+        margin-bottom: 15px !important;
+        border-bottom: none !important;
+    }
+
+    .tools-grid-container .other-tool-name::after {
+        content: "" !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 416px !important; /* PC表示のときだけ416pxに固定 */
+        height: 2px !important;
+        background-color: #8E0A0A !important;
+        display: block !important;
+    }
+}
+
+/* スマホ表示（SP版）のときは通常の幅に戻す（小さくなるのを防ぐ） */
+@media screen and (max-width: 599px) {
+    .tools-grid-container .other-tool-name::after {
+        display: none !important; /* SP版では固定線を非表示、または必要に応じて自然な下線にする */
+    }
+    .tools-grid-container .other-tool-name {
+        border-bottom: 2px solid #8E0A0A !important;
+        padding-bottom: 4px !important;
+    }
+}
+/* ========================================== */
+/* スマホ画面で右側の余白やはみ出しを完全に防ぐ設定 */
+/* ========================================== */
+html, body {
+    overflow-x: hidden; /* 横方向のはみ出しを強制的にカットする */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* ========================================== */
+/* スマホ版のバナー内の文字とボタンを左揃えにして位置を合わせる */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    .banner-overlay {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important; /* 左寄せにする */
+        text-align: left !important;        /* 文字も左寄せにする */
+        padding-left: 24px !important;      /* 文字の左端に合わせるための余白（必要に応じて調整） */
+    }
+    
+    
+.banner-btn {
+    position: absolute !important;
+    left: 20px !important;       /* バナーの左端からの距離（文字のインデントに合わせる） */
+    bottom: 20px !important;      /* バナーの下端からの距離 */
+    margin: 0 !important;
+    transform: none !important;
+    padding: 5px;
+}
+/* ========================================== */
+/* ペットバナーのテキストとボタンをさらに上に配置する調整 */
+/* ========================================== */
+.pet-banner-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important; /* 上部に寄せる */
+    align-items: flex-start !important;
+    padding-top: 70px !important;           /* 上からの距離 */
+    padding-left: 40% !important;           /* 右側エリアに配置 */
+    box-sizing: border-box !important;
+}
+
+.pet-text-block {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    position: static !important;
+    transform: none !important;
+    margin-top: -10px !important; /* ★これで「Pet Illustration...」の下にずらします */
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    /* padding-top: -15% !important; はエラーになるので削除しました */
+}
+
+.pet-banner-title {
+    margin: 0 !important;
+    font-size: 14px !important;
+}
+
+.pet-banner-sub {
+    display: none !important;
+}
+
+.pet-banner-btn {
+    margin: 8px 0 0 0 !important;
+    position: static !important;
+}
+}
+/* ========================================== */
+/* PC版でのペットバナーのテキストとボタンの配置調整 */
+/* ========================================== */
+@media screen and (min-width: 768px) {
+    .work-card .work-image {
+        position: relative !important;
+    }
+
+    .pet-banner-overlay {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;   /* 上下中央 */
+        align-items: flex-start !important;   /* 左寄せ基準 */
+        padding-left: 40% !important;         /* 犬のイラストを避けて右側エリアに配置 */
+        box-sizing: border-box !important;
+    }
+
+    .pet-text-block {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        position: static !important;
+        transform: none !important;
+        margin: 0 !important;
+        width: 100% !important;
+        margin-top: -150px !important;
+    }
+
+    .pet-banner-title {
+        margin: 0 0 10px 0 !important;
+        font-size: 16px !important;
+    }
+
+    .pet-banner-sub {
+        display: none !important;
+    }
+
+    .pet-banner-btn {
+        margin: 12px 0 0 0 !important;
+        position: static !important;
+    }
+}
+/* ========================================== */
+/* ヘッダーとメイン画像（.hero）の間の隙間をなくす */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    .hero {
+        margin-top: 0 !important;
+    }
+}
+/* ========================================== */
+/* メインビジュアル（.hero）をパンダまで強制的に表示させる最終調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* 親要素（.hero）のサイズをFigmaの比率（402:394）に完全固定 */
+    section.hero {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        /* Figma通りの比率を強制する（幅402に対して高さ394） */
+        aspect-ratio: 402 / 394 !important; 
+        margin-top: 0 !important;
+        padding: 0 !important;
+        background-image: none !important;
+        background-color: transparent !important;
+        overflow: hidden !important;
+    }
+
+    /* imgタグをFigmaの枠いっぱいに隙間なく収める */
+    section.hero img.hero-img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;     /* 枠いっぱいに広げる */
+        
+        /* --- 変更点: object-positionを調整 --- */
+        /* 画像の「上から10%の位置」を基準に表示する（パンダが確実に入るように） */
+        object-position: center 10% !important; 
+        
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+    }
+}
+.coming-soon-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e0e0e0; /* グレーにして未開放感を出す */
+  color: #666666;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  pointer-events: none; /* クリックできないようにする */
+  cursor: default;
+}

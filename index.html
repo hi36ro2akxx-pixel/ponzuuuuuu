@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier - ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- ヘッダー -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- ロゴ -->
+            <h1 class="logo">
+                <a href="#"><img src="images/images/header.png" alt="Atelier"></a>
+            </h1>
+            
+            <!-- PC用のナビゲーション -->
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#works">制作実績</a></li>
+                    <li><a href="#about">私について</a></li>
+                    <li><a href="#skills">スキル＆ツール</a></li>
+                    <li><a href="#contact" class="header-contact-btn">お問い合わせ <img src="images/images/mail.png" alt="" class="mail-icon"></a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="header-contact-btn-sp">
+                お問い合わせ <img src="images/images/mail.png" alt="" class="mail-icon">
+            </a>
+            <!-- スマホ用のハンバーガーメニュー（三本線） -->
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- スマホ用のドロワーメニュー -->
+        <div class="sp-menu">
+            <div class="sp-menu-content">
+                <ul class="sp-menu-list">
+                    <li><a href="#works">制作実績</a></li>
+                    <li><a href="#about">私について</a></li>
+                    <li><a href="#skills">スキル＆ツール</a></li>
+                </ul>
+                <a href="#contact" class="sp-menu-contact-btn">
+                    お問い合わせ <img src="images/images/mail.png" alt="" class="mail-icon">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインビジュアル -->
+    <section class="hero">
+        <img src="images/images/top.png" alt="メインビジュアルのイラスト" class="hero-img">
+        <div class="hero-content">
+            <h1>Beautiful<br>Dissonance</h1>
+            <p class="hero-subtext">
+                コードと色彩で、異世界を構築する<br>
+                デザインとアートの境界線。
+            </p>
+        </div>
+    </section>
+
+    <!-- 制作実績セクション -->
+    <section id="works" class="works-section">
+        <div class="section-title-bg">
+            <h2>制作実績</h2>
+        </div>
+    </section>
+    <div class="works-container">
+    
+        <!-- 1つ目：みらい工務店の作品カード -->
+        <article class="work-card">
+            <div class="work-image">
+                <img src="images/images/web1.png" alt="みらい工務店">
+            </div>
+            <div class="work-info">
+                <p class="work-category">Webサイト</p>
+                <h3 class="work-title">みらい工務店 - 理想の暮らしをカタチにする家づくり -</h3>
+                <p class="work-text">
+                    木の温もりや自然との調和を感じさせる、洗練された工務店のWebサイトデザインです。ユーザーが求める情報へスムーズにアクセスできるよう、すっきりとしたナビゲーションと落ち着いた配色で、安心感と信頼感を与えるレイアウトに仕上げています。
+                </p>
+                <ul class="work-tags">
+                    <li>ワイヤーフレーム</li>
+                    <li>デザイン</li>
+                    <li>WordPress</li>
+                    <li>HTML/CSS</li>
+                </ul>
+                <!-- 作品詳細ページへのリンク（正しいパス） -->
+                <a href="work-detail/index.html" class="work-button">
+                    サイトを見る <span class="arrow">&gt;</span>
+                </a>
+            </div>
+        </article>
+
+       <!-- Gallery: The Dissonant World の作品カード -->
+        <article class="work-card">
+            <div class="work-image">
+                <img src="images/images/bana1png.png" alt="Gallery: The Dissonant World">
+                <div class="banner-overlay">
+                    <p class="banner-sub">All Works</p>
+                    <p class="banner-main">すべての色彩と、不協和音。</p>
+                    <a href="#" class="banner-btn">作品一覧を見る</a>
+                </div>
+            </div>
+            <div class="work-info">
+                <p class="work-category">バナー</p>
+                <h3 class="work-title">Gallery: The Dissonant World</h3>
+                <p class="work-text">
+                    デジタルイラストレーションとWebデザインの境界線を探求するポートフォリオの全作品アーカイブ。繊細なディテールと毒気のある色彩が織りなす、私だけの世界観を網羅しています。最新のアートワークから、Webサイト制作の実績まで、私のクリエイティブのすべてをここに集約しました。
+                </p>
+                <ul class="work-tags">
+                    <li>ワイヤーフレーム</li>
+                    <li>デザイン</li>
+                    <li>WordPress</li>
+                    <li>HTML/CSS</li>
+                    <li>Creative</li>
+                    <li>Archive</li>
+                </ul>
+                <div class="coming-soon-btn">COMING SOON</div>
+            </div>
+        </article>
+
+        <!-- 3つ目：Trio Portrait の作品カード -->
+        <article class="work-card">
+            <div class="work-image">
+                <img src="images/images/web2.png" alt="Trio Portrait">
+            </div>
+            <div class="work-info">
+                <p class="work-category">Webサイト</p>
+                <h3 class="work-title">Trio Portrait - 穏やかな午後の光の中で -</h3>
+                <p class="work-text">
+                    愛犬たちの個性を描き出した動物のポートフォリオ制作。それぞれの毛並みの質感や、表情の繊細な違いをデジタルイラストで表現しました。背景を明るい色調にすることで、被写体との対比による『温かさ』と『日常の親しみやすさ』を強調し、ペットの愛らしさが引き立つWebサイトのメインビジュアルとして構成しています。
+                </p>
+                <ul class="work-tags">
+                    <li>ワイヤーフレーム</li>
+                    <li>デザイン</li>
+                    <li>WordPress</li>
+                    <li>HTML/CSS</li>
+                    <li>Illustration</li>
+                    <li>Pet Portrait</li>
+                </ul>
+                <div class="coming-soon-btn">COMING SOON</div>
+            </div>
+        </article>
+
+        <!-- 4つ目：Pet Portrait Illustration の作品カード -->
+        <article class="work-card">
+            <div class="work-image">
+                <img src="images/images/bana2.png" alt="Pet Portrait Illustration">
+                <div class="pet-banner-overlay">
+                    <div class="pet-text-block">
+                        <p class="pet-banner-title">その一瞬を、色づけて。</p>
+                        <p class="pet-banner-sub"> </p>
+                        <a href="#" class="pet-banner-btn">制作について詳しく</a>
+                    </div>
+                </div>
+            </div>
+            <div class="work-info">
+                <p class="work-category">バナー</p>
+                <h3 class="work-title">Pet Portrait Illustration - 家族の愛を描く -</h3>
+                <p class="work-text">
+                    デジタル技術でペットの個性を鮮やかに描き出すポートフォリオ制作。鮮やかなカラー背景と緻密なタッチを組み合わせることで、空間を明るく彩るアートを提案しています。大切な家族の姿をWebデザインと融合させるクリエイティブの可能性を追求しました。
+                </p>
+                <ul class="work-tags">
+                    <li>ワイヤーフレーム</li>
+                    <li>デザイン</li>
+                    <li>WordPress</li>
+                    <li>HTML/CSS</li>
+                </ul>
+                <div class="coming-soon-btn">COMING SOON</div>
+            </div>
+        </article>
+    </div>
+
+    <!-- 「私について」セクション -->
+    <section id="about" class="works-section">
+        <div class="section-title-bg">
+            <h2>私について</h2>
+        </div>
+    </section>
+    <div class="works-container">
+        <article class="work-card profile-card">
+            <div class="work-image">
+                <img src="images/images/profile.png" alt="永嶋 杏月">
+            </div>
+            <div class="work-info">
+                <p class="work-category">Anzu Nagashima</p>
+                <h3 class="work-title profile-name">永嶋 杏月</h3>
+                <p class="work-text">
+                    1994年12月9日生まれ。高校卒業後、実務に従事しながらESA-AcademyにてWebデザインを専門的に学ぶ。
+                </p>
+                <p class="work-text">
+                    独学とスクールでの学習を通じ、HTML/CSSを用いたWebサイト制作の基礎を習得。現在は、自身が得意とするイラストレーションの色彩感覚を活かし、美しさと機能美が調和したWebデザインの実現を目指し学習を続けています。
+                </p>
+                <p class="work-text">
+                    Webサイト制作・デザイン・イラスト制作を軸に活動。単に見た目が美しいだけでなく、ユーザーにとって「分かりやすく、使いやすい」体験を設計し、目的達成に繋がるデザインと機能を提供します。
+                </p>
+            </div>
+        </article>
+    </div>
+
+    <!-- 「スキル＆ツール」セクション -->
+    <section id="skills" class="works-section skill-section">
+        <div class="section-title-bg">
+            <h2>スキル＆ツール</h2>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 1. Webサイトデザイン／バナー制作 -->
+    <!-- ========================================== -->
+    <div class="other-tool-title-area">
+        <span class="line-left"></span>
+        <h3 class="other-tool-heading">Webサイトデザイン／バナー制作</h3>
+        <span class="line-right"></span>
+    </div>
+
+    <div class="works-container">
+        <!-- Figma -->
+        <article class="work-card">
+            <div class="work-image">
+                <img src="images/figma.png" alt="Figmaのアイコン">
+            </div>
+            <div class="work-info">
+                <h3 class="work-title">Figma</h3>
+                <p class="work-text">
+                    Figmaを使用して、Webサイトやバナーのレイアウトデザインを制作しています。自身でHTML/CSS（SCSS）の実装を行う視点を活かし、コーディング時の再現性やモバイルレスポンシブを意識したコンポーネント設計を心がけています。デザインの美しさだけでなく、レイヤー構造の整理や、ガイドに沿った正確なデータ作成が可能です。
+                </p>
+            </div>
+        </article>
+
+        <!-- Photoshop / Illustrator -->
+        <article class="work-card">
+            <div class="work-image">
+                <img src="images/ip.png" alt="Photoshop / Illustratorのアイコン">
+            </div>
+            <div class="work-info">
+                <h3 class="work-title">Photoshop / Illustrator</h3>
+                <p class="work-text">
+                    得意とするデジタルイラストレーションの制作や、バナー等のビジュアル制作に使用しています。Photoshopを用いた緻密な手描きタッチの表現や画像加工、Illustratorを使ったグラフィック作成に対応可能です。ダークで美しい世界観のアートワークから、温かみのあるアニマルポートレートまで、媒体の目的に合わせた幅広いテイストを描き分けることができます。
+                </p>
+            </div>
+        </article>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 2. コーディング -->
+    <!-- ========================================== -->
+    <div class="other-tool-title-area">
+        <span class="line-left"></span>
+        <h3 class="other-tool-heading">コーディング</h3>
+        <span class="line-right"></span>
+    </div>
+
+    <div class="works-container">
+        <!-- HTML / CSS -->
+        <article class="work-card">
+            <div class="work-image">
+                <img src="images/images/vscode.png" alt="HTML/CSSのアイコン">
+            </div>
+            <div class="work-info">
+                <h3 class="work-title">HTML / CSS</h3>
+                <p class="work-text">
+                    Webサイトの骨組みからスタイリングまでを一貫して担当しています。スマートフォン・タブレット・PCなど、あらゆるデバイスで最適に表示されるレスポンシブデザインを実装可能です。また、クラス設計においてはBEMなどの命名規則を意識し、将来的な改修や他のデザイナー・開発者が見ても理解しやすい、クリーンで保守性の高いコードを書くことを心がけています。
+                </p>
+            </div>
+        </article>
+
+        <!-- JavaScript -->
+        <article class="work-card">
+            <div class="work-image">
+                <img src="images/images/javascript.png" alt="JavaScriptのアイコン">
+            </div>
+            <div class="work-info">
+                <h3 class="work-title">JavaScript</h3>
+                <p class="work-text">
+                    ユーザーの操作に反応するインタラクティブな演出を実装しています。スクロールに応じて要素をふわっと表示させるアニメーションや、画像のホバーエフェクト、直感的に操作できるアコーディオングループなど、Webサイトの質を高めるUI表現を制作しています。単に動きをつけるだけでなく、読み込み速度やユーザビリティにも配慮した実装を意識しています。
+                </p>
+            </div>
+        </article>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 3. その他ツール -->
+    <!-- ========================================== -->
+    <div class="other-tool-title-area">
+        <span class="line-left"></span>
+        <h3 class="other-tool-heading">その他ツール</h3>
+        <span class="line-right"></span>
+    </div>
+
+    <div class="tools-grid-container">
+        <!-- 1. Slack -->
+        <div class="tool-card">
+            <div class="tool-top-row">
+                <div class="tool-icon-area">
+                    <img src="images/images/mdi_slack.png" alt="Slackのアイコン" class="tool-icon">
+                </div>
+                <div class="tool-header">
+                    <h4 class="tool-name">Slack</h4>
+                </div>
+            </div>
+            <div class="tool-info-area">
+                <p class="tool-text">
+                    業務でのコミュニケーションツールとして活用しているだけでなく、Canvasを使用して案件情報の整理・共有も行っています。チャンネルを活用した情報管理や、リマインダー・ワークフロー機能を取り入れることで、業務の効率化にも役立てています。
+                </p>
+            </div>
+        </div>
+
+        <!-- 2. Visual Studio Code -->
+        <div class="tool-card">
+            <div class="tool-top-row">
+                <div class="tool-icon-area">
+                    <img src="images/images/devicon-plain_vscode.png" alt="VS Codeのアイコン" class="tool-icon">
+                </div>
+                <div class="tool-header">
+                    <h4 class="tool-name">Visual Studio Code</h4>
+                </div>
+            </div>
+            <div class="tool-info-area">
+                <p class="tool-text">
+                    Visual Studio Codeを使用して、効率的なコーディング環境を整えています。拡張機能やスニペットを活用し、作業のスピードと品質の両立を意識しています。
+                </p>
+            </div>
+        </div>
+
+        <!-- 3. Notion -->
+        <div class="tool-card">
+            <div class="tool-top-row">
+                <div class="tool-icon-area">
+                    <img src="images/images/notion 1.png" alt="Notionのアイコン" class="tool-icon">
+                </div>
+                <div class="tool-header">
+                    <h4 class="tool-name">Notion</h4>
+                </div>
+            </div>
+            <div class="tool-info-area">
+                <p class="tool-text">
+                    プロジェクトの進捗管理や情報整理、ドキュメント作成に活用しています。タスクの優先順位やスケジュールをデータベース化して一元管理し、スムーズで計画的な制作進行を意識するための必須ツールとして取り入れています。
+                </p>
+            </div>
+        </div>
+
+        <!-- 4. ChatGPT -->
+        <div class="tool-card">
+            <div class="tool-top-row">
+                <div class="tool-icon-area">
+                    <img src="images/images/openai 1.png" alt="ChatGPTのアイコン" class="tool-icon">
+                </div>
+                <div class="tool-header">
+                    <h4 class="tool-name">ChatGPT</h4>
+                </div>
+            </div>
+            <div class="tool-info-area">
+                <p class="tool-text">
+                    アイデア出しや文章構成のブラッシュアップ、コーディング時のリサーチなど、制作プロセスの効率化を図るためのAIパートナーとして活用しています。作業の壁打ちや効率的な情報整理を行うことで、クリエイティブの質とスピードを高めるために取り入れています。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- フッターセクション -->
+    <!-- ========================================== -->
+    <footer id="contact" class="site-footer">
+        <div class="footer-nav-bg">
+            <ul class="footer-links">
+                <li><a href="#works">制作実績</a></li>
+                <li><a href="#about">私について</a></li>
+                <li><a href="#skills">スキル＆ツール</a></li>
+                <li>
+                    <a href="#contact" class="footer-mail-link">
+                        お問い合わせ
+                        <img src="images/images/mail.png" alt="メールアイコン" class="footer-mail-icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; CopyRight</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

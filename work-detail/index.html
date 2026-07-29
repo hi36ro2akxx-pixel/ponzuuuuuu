@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品詳細ページ - Beautiful Dissonance</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google FontsからPlayfair Displayを読み込む -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <!-- ロゴ -->
+            <h1 class="logo">
+                <a href="index.html"><img src="images/header.png" alt="Atelier"></a>
+            </h1>
+            
+            <!-- PC用のナビゲーション -->
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" class="header-contact-btn">お問い合わせ <img src="images/mail.png" alt="" class="mail-icon"></a></li>
+                </ul>
+            </nav>
+            <a href="index.html" class="header-contact-btn-sp">
+                お問い合わせ <img src="images/mail.png" alt="" class="mail-icon">
+            </a>
+            <!-- スマホ用のハンバーガーメニュー（三本線） -->
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- スマホ用のドロワーメニュー -->
+        <div class="sp-menu">
+            <div class="sp-menu-content">
+                <a href="index.html" class="sp-menu-contact-btn">
+                    お問い合わせ <img src="images/mail.png" alt="" class="mail-icon">
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- メインビジュアル（赤い背景と大きなタイトル） -->
+    <section class="detail-hero">
+        <div class="detail-hero-content">
+            <h1 class="detail-main-title">Beautiful<br>Dissonance</h1>
+        </div>
+    </section>
+
+    <!-- パンくずリスト（トップページ ＞ Beautiful Dissonance） -->
+    <div class="breadcrumb-container">
+        <p class="breadcrumb">
+            <a href="https://hi36ro2akxx-pixel.github.io/ponzuuuuuu/">トップページ</a> ＞ Beautiful Dissonance
+        </p>
+    </div>
+    <!-- 作品詳細：情報テーブルエリア -->
+    <section class="work-info-section">
+        <div class="work-info-container">
+            <table class="work-info-table">
+                <tr>
+                    <th>クライアント（仮想）</th>
+                    <td>みらい工務店</td>
+                </tr>
+                <tr>
+                    <th>制作日</th>
+                    <td>2026年7月 制作</td>
+                </tr>
+                <tr>
+                    <th>制作期間</th>
+                    <td>
+                        ワイヤーフレーム／約1週間<br>
+                        デザインカンプ／約1週間<br>
+                        実装／約1ヶ月
+                    </td>
+                </tr>
+                <tr>
+                    <th>制作目的</th>
+                    <td>ブランドの魅力を最大限に引き出すため</td>
+                </tr>
+                <tr>
+                    <th>ターゲット</th>
+                    <td>自然素材や木の温もりを大切にした家づくりに興味のある方</td>
+                </tr>
+                <tr>
+                    <th>使用ツール</th>
+                    <td>Figma / Visual Studio Code</td>
+                </tr>
+                <tr>
+                    <th>URL</th>
+                    <td>準備中</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <!-- こだわりポイントなど セクション -->
+    <section class="point-section">
+        
+        <!-- 赤い小見出しの帯 -->
+        <div class="point-header-banner">
+            <h2 class="point-banner-title">こだわりポイントなど</h2>
+        </div>
+
+        <!-- ポイント1つ目のコンテンツ -->
+        <div class="point-content-container">
+            <div class="point-item">
+                <div class="point-image">
+                    <!-- 画像のファイル名は環境に合わせて変更してください -->
+                    <img src="images/web1.png" alt="自然の温もりを伝えるデザインのスクショ">
+                </div>
+                <div class="point-text">
+                    <h3 class="point-title">自然の温もりを伝える親しみやすい配色とデザイン</h3>
+                    <p class="point-description">
+                        木や緑といった自然素材の色味と調和するアースカラー（グリーンとブラウン）を基調にし、訪れた人に安心感と温かみを感じさせるデザインに仕上げました。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ポイント2つ目のコンテンツ（スマートフォン対応のレスポンシブ設計） -->
+        <div class="point-content-container" style="margin-top: 60px;">
+            <div class="point-item">
+                <div class="point-image">
+                    <img src="images/sumaho.png" alt="スマートフォン対応のレスポンシブ設計のスクショ">
+                </div>
+                <div class="point-text">
+                    <h3 class="point-title">スマートフォン対応のレスポンシブ設計</h3>
+                    <p class="point-description">
+                        どのようなデバイスで閲覧しても崩れないよう、HTML/CSSを用いた柔軟なレイアウト構築を行いました。文字の改行位置や余白のバランスを細かく調整し、スマートフォン表示時でもイラストの迫力と読みやすさが両立するように設計しています。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- サイトのスクショ セクション -->
+    <section class="screenshot-section">
+        
+        <!-- 赤い帯の見出し -->
+        <div class="point-header-banner" style="margin-top: 80px;">
+            <h2 class="point-banner-title">サイトのスクショ</h2>
+        </div>
+
+        <!-- スクショ画像を表示するエリア -->
+        <div class="screenshot-container">
+            <div class="screenshot-main">
+                <!-- PC版などの大きいスクショ画像 -->
+                <img src="images/sukusho1.png" alt="サイト全体のPC版スクリーンショット">
+            </div>
+            <div class="screenshot-sub">
+                <!-- スマホ版などのスクショ画像 -->
+                <img src="images/sukusho2.png" alt="サイトのスマートフォン版スクリーンショット">
+            </div>
+        </div>
+    </section>
+    <!-- 他の作品を見る セクション -->
+    <section class="other-works-section">
+        
+        <!-- 赤い帯の見出し -->
+        <div class="point-header-banner" style="margin-top: 80px;">
+            <h2 class="point-banner-title">他の作品を見る</h2>
+        </div>
+
+        <!-- 3つの作品カードを並べるコンテナ -->
+        <div class="works-cards-container">
+            
+            <!-- 作品1 -->
+            <div class="work-card">
+                <a href="#">
+                    <div class="work-card-img">
+                        <img src="images/web3.png" alt="朱色の幻影">
+                    </div>
+                    <div class="work-card-info">
+                        <p class="work-card-title">朱色の幻影</p>
+                        <span class="arrow-icon">＞</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 作品2 -->
+            <div class="work-card">
+                <a href="#">
+                    <div class="work-card-img">
+                        <img src="images/web4.png" alt="Melty Nightmare">
+                    </div>
+                    <div class="work-card-info">
+                        <p class="work-card-title">Melty Nightmare</p>
+                        <span class="arrow-icon">＞</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 作品3 -->
+            <div class="work-card">
+                <a href="#">
+                    <div class="work-card-img">
+                        <img src="images/web5.png" alt="ミッドナイト・ドール">
+                    </div>
+                    <div class="work-card-info">
+                        <p class="work-card-title">ミッドナイト・ドール</p>
+                        <span class="arrow-icon">＞</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- フッター -->
+    <footer class="site-footer">
+        <!-- 赤い背景のナビゲーション帯 -->
+        <div class="footer-nav-bg">
+            <div class="header-container">
+                <ul class="footer-links">
+                    <li><a href="index.html">制作実績</a></li>
+                    <li><a href="index.html">私について</a></li>
+                    <li><a href="index.html">スキル＆ツール</a></li>
+                    <li><a href="#">お問い合わせ <img src="images/mail.png" alt="" class="footer-mail-icon"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 一番下のグレーのコピーライト帯 -->
+        <div class="footer-copyright">
+            <p>&copy; CopyRight</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
