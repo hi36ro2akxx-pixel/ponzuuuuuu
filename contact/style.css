@@ -1,0 +1,140 @@
+/* 全体のコンテナ */
+.contact-page {
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+/* ヘッダー画像・タイトル部分 */
+.contact-hero {
+  background-image: url('images/obi2.png'); /* サンプルの背景画像に合わせて調整 */
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.contact-hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+}
+.contact-hero h1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* フォーム全体の外枠 */
+.contact-form {
+  max-width: 700px;
+  margin: 60px auto 0;
+  padding: 0 20px;
+}
+
+/* 各入力項目の行 */
+.contact-form .form-item {
+  margin-bottom: 30px;
+}
+
+/* 必須・任意ラベルのエリア */
+.form-label-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* 必須タグ（赤茶色系） */
+.required {
+  background-color: #8B2626;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+/* 任意タグ（グレー系） */
+.optional {
+  background-color: #666666;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.form-label-area label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* 入力欄（テキストボックス・テキストエリア）の共通デザイン */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #8B2626;
+}
+
+/* 電話番号の3分割レイアウト */
+.tel-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tel-inputs input {
+  text-align: center;
+}
+
+/* メールアドレスのレイアウト (@マーク挟み) */
+.email-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.email-inputs .at {
+  color: #666666;
+  font-weight: bold;
+}
+
+/* プライバシーポリシー */
+.form-privacy {
+  text-align: center;
+  margin: 40px 0 30px;
+  font-size: 14px;
+}
+.form-privacy a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+/* 送信ボタン（ワインレッド系のボタン） */
+.form-submit {
+  text-align: center;
+}
+.form-submit button {
+  background-color: #7A1C1C;
+  color: #ffffff;
+  border: none;
+  padding: 14px 40px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.form-submit button:hover {
+  opacity: 0.8;
+}
