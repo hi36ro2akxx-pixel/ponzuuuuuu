@@ -138,3 +138,163 @@
 .form-submit button:hover {
   opacity: 0.8;
 }
+
+/* ヘッダー全体を上部に固定し、背景を白くする */
+header.site-header,
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* うっすら影をつけて見栄えを良くする */
+}
+
+/* ヘッダーの中身を左右に配置するコンテナ */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 左右に分ける */
+  box-sizing: border-box;
+}
+
+/* ロゴのサイズ調整 */
+.logo img {
+  height: 40px; /* お好みの高さに調整してください */
+  width: auto;
+}
+
+/* PC用のナビゲーションを横並びにする */
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px; /* メニュー同士の間隔 */
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 右端の赤いお問い合わせボタンのデザイン */
+.header-contact-btn {
+  background-color: #8B2626; /* 赤茶色のボタン */
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s;
+}
+
+.header-contact-btn:hover {
+  opacity: 0.8;
+}
+
+/* 固定したヘッダーの下にコンテンツが潜り込まないようにする余白 */
+body {
+  margin-top: 80px; /* ヘッダーの高さに合わせて調整 */
+}
+
+/* --- スマホ用の基本設定（画面幅が狭いとき） --- */
+
+/* デフォルト（PC表示）ではスマホ用ボタンやメニューを非表示にする */
+.header-contact-btn-sp,
+.hamburger-menu,
+.sp-menu {
+  display: none;
+}
+
+/* 画面幅が狭い場合（例: 768px以下）の切り替え */
+@media screen and (max-width: 768px) {
+  
+  /* PC用のメニューを非表示にする */
+  .header-nav {
+    display: none;
+  }
+
+  /* スマホ用のお問い合わせボタンを表示する（必要に応じて） */
+  .header-contact-btn-sp {
+    display: inline-flex;
+    align-items: center;
+    background-color: #8B2626;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    gap: 4px;
+  }
+
+  /* ハンバーガーメニュー（三本線）を表示する */
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+    transition: 0.3s;
+  }
+
+  /* スマホ用ドロワーメニュー（三本線を押したときに開く全画面などのメニュー） */
+  .sp-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* 初期状態では画面の外に隠しておく */
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 998;
+  }
+
+  /* メニューが開いたときのクラス（JavaScriptなどで付与する場合） */
+  .sp-menu.is-active {
+    right: 0;
+  }
+
+  .sp-menu-content {
+    text-align: center;
+  }
+
+  .sp-menu-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #8B2626;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    gap: 8px;
+  }
+}
+/* body全体、またはお問い合わせページのメインビジュアルに上の余白を空ける */
+body {
+  margin-top: 80px; /* ヘッダーの高さに合わせて（70px〜90px程度で調整） */
+}
+.contact-hero {
+  padding-top: 80px; /* ヘッダーが被らないように十分な余白を空ける（数値はヘッダーの高さに合わせて調整） */
+}
