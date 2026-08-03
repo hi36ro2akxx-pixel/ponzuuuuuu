@@ -4,27 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>お問い合わせ - Atelier</title>
-  <!-- 既存のCSSやSCSSの読み込み（パスは環境に合わせて調整してください） -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-      <header class="site-header">
+    <!-- ヘッダー -->
+    <header class="site-header">
         <div class="header-container">
             <!-- ロゴ -->
             <h1 class="logo">
-                <a href="index.html"><img src="images/header.png" alt="Atelier"></a>
+                <a href="../index.html"><img src="../images/images/header.png" alt="Atelier"></a>
             </h1>
             
             <!-- PC用のナビゲーション -->
             <nav class="header-nav">
                 <ul>
-                    <li><a href="#works">制作実績</a></li>
-                    <li><a href="#about">私について</a></li>
-                    <li><a href="#skills">スキル＆ツール</a></li>
+                    <li><a href="../index.html#works">制作実績</a></li>
+                    <li><a href="../index.html#about">私について</a></li>
+                    <li><a href="../index.html#skills">スキル＆ツール</a></li>
                 </ul>
             </nav>
             
-            <!-- スマホ用のハンバーガーメニュー（三本線） -->
+            <!-- スマホ用のハンバーガーメニュー -->
             <div class="hamburger-menu">
                 <span></span>
                 <span></span>
@@ -36,111 +36,112 @@
         <div class="sp-menu">
             <div class="sp-menu-content">
                 <ul class="sp-menu-list">
-                    <li><a href="https://hi36ro2akxx-pixel.github.io/ponzuuuuuu/#works">制作実績</a></li>
-                    <li><a href="#https://hi36ro2akxx-pixel.github.io/ponzuuuuuu/#about">私について</a></li>
-                    <li><a href="#https://hi36ro2akxx-pixel.github.io/ponzuuuuuu/#skills">スキル＆ツール</a></li>
+                    <li><a href="../index.html#works">制作実績</a></li>
+                    <li><a href="../index.html#about">私について</a></li>
+                    <li><a href="../index.html#skills">スキル＆ツール</a></li>
                 </ul>
-                
             </div>
         </div>
     </header>
 
-  <!-- お問い合わせフォームのメイン部分 -->
-  <main class="contact-page">
-    
-    <!-- ページ上部のタイトル部分 -->
-    <div class="contact-hero">
-      <h1>お問い合わせフォーム</h1>
-    </div>
-
-    <!-- フォーム本体 -->
-    <form class="contact-form" action="#" method="POST">
-      
-      <!-- お名前 -->
-      <div class="form-item">
-        <div class="form-label-area">
-          <span class="required">必須</span>
-          <label for="name">お名前</label>
+    <!-- お問い合わせフォームのメイン部分 -->
+    <main class="contact-page">
+        
+        <!-- ページ上部のタイトル部分 -->
+        <div class="contact-hero">
+            <h1>お問い合わせフォーム</h1>
         </div>
-        <input type="text" id="name" placeholder="山田 太郎">
-      </div>
 
-      <!-- フリガナ -->
-      <div class="form-item">
-        <div class="form-label-area">
-          <span class="required">必須</span>
-          <label for="kana">フリガナ</label>
-        </div>
-        <input type="text" id="kana" placeholder="ヤマダ タロウ">
-      </div>
+        <!-- フォーム本体 -->
+        <form class="contact-form" action="#" method="POST">
+            
+            <!-- お名前 -->
+            <div class="form-item">
+                <div class="form-label-area">
+                    <span class="required">必須</span>
+                    <label for="name">お名前</label>
+                </div>
+                <input type="text" id="name" placeholder="山田 太郎">
+            </div>
 
-      <!-- 部署 -->
-      <div class="form-item">
-        <div class="form-label-area">
-          <span class="optional">任意</span>
-          <label for="department">部署</label>
-        </div>
-        <input type="text" id="department" placeholder="">
-      </div>
+            <!-- フリガナ -->
+            <div class="form-item">
+                <div class="form-label-area">
+                    <span class="required">必須</span>
+                    <label for="kana">フリガナ</label>
+                </div>
+                <input type="text" id="kana" placeholder="ヤマダ タロウ">
+            </div>
 
-      <!-- 役職 -->
-      <div class="form-item">
-        <div class="form-label-area">
-          <span class="optional">任意</span>
-          <label for="position">役職</label>
-        </div>
-        <input type="text" id="position" placeholder="">
-      </div>
+            <!-- 部署 -->
+            <div class="form-item">
+                <div class="form-label-area">
+                    <span class="optional">任意</span>
+                    <label for="department">部署</label>
+                </div>
+                <input type="text" id="department" placeholder="">
+            </div>
 
-      <!-- 電話番号 -->
-      <div class="form-item">
-        <div class="form-label-area">
-          <span class="required">必須</span>
-          <label>電話番号</label>
-        </div>
-        <div class="tel-inputs">
-          <input type="text" placeholder="000" maxlength="4">-
-          <input type="text" placeholder="0000" maxlength="4">-
-          <input type="text" placeholder="0000" maxlength="4">
-        </div>
-      </div>
+            <!-- 役職 -->
+            <div class="form-item">
+                <div class="form-label-area">
+                    <span class="optional">任意</span>
+                    <label for="position">役職</label>
+                </div>
+                <input type="text" id="position" placeholder="">
+            </div>
 
-      <!-- メールアドレス -->
-      <div class="form-item">
-        <div class="form-label-area">
-          <span class="required">必須</span>
-          <label>メールアドレス</label>
-        </div>
-        <div class="email-inputs">
-          <input type="email" placeholder="mail">
-          <span class="at">@</span>
-          <input type="text" placeholder="example.com">
-        </div>
-      </div>
+            <!-- 電話番号 -->
+            <div class="form-item">
+                <div class="form-label-area">
+                    <span class="required">必須</span>
+                    <label>電話番号</label>
+                </div>
+                <div class="tel-inputs">
+                    <input type="text" placeholder="000" maxlength="4">-
+                    <input type="text" placeholder="0000" maxlength="4">-
+                    <input type="text" placeholder="0000" maxlength="4">
+                </div>
+            </div>
 
-      <!-- お問い合わせ内容 -->
-      <div class="form-item">
-        <div class="form-label-area">
-          <span class="required">必須</span>
-          <label for="message">お問い合わせ内容</label>
-        </div>
-        <textarea id="message" rows="6"></textarea>
-      </div>
+            <!-- メールアドレス -->
+            <div class="form-item">
+                <div class="form-label-area">
+                    <span class="required">必須</span>
+                    <label>メールアドレス</label>
+                </div>
+                <div class="email-inputs">
+                    <input type="email" placeholder="mail">
+                    <span class="at">@</span>
+                    <input type="text" placeholder="example.com">
+                </div>
+            </div>
 
-      <!-- プライバシーポリシー同意 -->
-      <div class="form-privacy">
-        <label>
-          <input type="checkbox"> <a href="#" target="_blank">プライバシーポリシー</a>に同意する。
-        </label>
-      </div>
+            <!-- お問い合わせ内容 -->
+            <div class="form-item">
+                <div class="form-label-area">
+                    <span class="required">必須</span>
+                    <label for="message">お問い合わせ内容</label>
+                </div>
+                <textarea id="message" rows="6"></textarea>
+            </div>
 
-      <!-- 送信ボタン -->
-      <div class="form-submit">
-        <button type="submit">送信内容を確認する ></button>
-      </div>
+            <!-- プライバシーポリシー同意 -->
+            <div class="form-privacy">
+                <label>
+                    <input type="checkbox"> <a href="#" target="_blank">プライバシーポリシー</a>に同意する。
+                </label>
+            </div>
 
-    </form>
-  </main>
+            <!-- 送信ボタン -->
+            <div class="form-submit">
+                <button type="submit">送信内容を確認する ></button>
+            </div>
 
+        </form>
+    </main>
+
+    <!-- JSファイルの読み込み -->
+    <script src="../script.js"></script>
 </body>
 </html>

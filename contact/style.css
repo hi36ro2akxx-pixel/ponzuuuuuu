@@ -298,3 +298,101 @@ body {
 .contact-hero {
   padding-top: 80px; /* ヘッダーが被らないように十分な余白を空ける（数値はヘッダーの高さに合わせて調整） */
 }
+/* bodyに menu-open がついたときにスマホ用ドロワーメニューを表示する */
+body.menu-open .sp-menu {
+  right: 0; /* 画面内に出現させる */
+}
+
+/* ついでに、ハンバーガーボタン自体を「×」の形に変形させたい場合（任意） */
+body.menu-open .hamburger-menu span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+body.menu-open .hamburger-menu span:nth-child(2) {
+  opacity: 0;
+}
+body.menu-open .hamburger-menu span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+/* スマホ用メニュー内のリンクの文字色と下線を消す */
+.sp-menu-content a {
+  text-decoration: none; /* 下線を消す */
+  color: #333333; /* 文字を黒色にする（または好みの色コード） */
+}
+
+/* リンクにマウスを乗せたときのスタイル（任意） */
+.sp-menu-content a:hover {
+  opacity: 0.7; /* 少し薄くする */
+}
+/* スマホ用メニュー全体を中央揃えにする */
+.sp-menu-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中身をすべて中央に寄せる */
+  text-align: center;
+}
+
+/* メニューリストの点（・）を消して中央に配置する */
+.sp-menu-list {
+  list-style: none; /* 点を消す */
+  padding: 0;
+  margin: 0 0 40px; /* 下に少し余白を空ける */
+  width: 100%;
+}
+
+.sp-menu-list li {
+  margin-bottom: 20px; /* メニュー項目同士の間隔 */
+}
+
+/* リンクの文字色を黒、下線なしにする（念の為） */
+.sp-menu-list a {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* お問い合わせボタンを中央に配置する */
+.sp-menu-contact-btn {
+  display: flex;
+  justify-content: center; /* ボタン内のアイコンと文字を中央揃え */
+  margin: 0 auto;
+}
+
+/* スマホ用メニュー全体のコンテナ（中央揃えの基点） */
+.sp-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中身をすべて中央に寄せる */
+  justify-content: center; /* 縦方向も中央に（必要に応じて） */
+  width: 100%;
+  padding: 60px 0; /* 上下に広い余白を設ける */
+}
+
+/* メニューリスト本体 */
+.sp-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px; /* リストの下にボタン用の余白を空ける */
+  width: 100%;
+  text-align: center; /* 文字を中央揃え */
+}
+
+/* 各メニュー項目のリンク */
+.sp-menu-list a {
+  display: block; /* リンク全体をクリック可能にする */
+  padding: 15px 0; /* 上下のパディングを広げて、項目を大きく見せる */
+  font-size: 18px; /* 文字サイズを大きくする（参考画像に合わせて調整） */
+  font-weight: bold; /* 太字にする */
+  color: #333333; /* 文字色を黒にする */
+  text-decoration: none; /* 下線を消す */
+  transition: opacity 0.3s;
+}
+
+.sp-menu-list a:hover {
+  opacity: 0.7;
+}
+
+/* お問い合わせボタンの調整（もしリストの下にある場合） */
+.sp-menu-contact-btn {
+  display: inline-flex; /* ボタンのサイズを内容に合わせる */
+  margin: 0 auto; /* 中央に配置 */
+}
