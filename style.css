@@ -2029,3 +2029,19 @@ html, body {
   pointer-events: none; /* クリックできないようにする */
   cursor: default;
 }
+/* ヘッダー全体を画面の横幅いっぱいに広げる場合 */
+header {
+  width: 100%;
+  background-color: #ffffff; /* 背景色（必要に応じて） */
+  position: relative;
+ position: fixed; width: 100%; top: 0; left: 0; */
+}
+
+/* ヘッダーの中身（ロゴやメニュー）をまとめている箱 */
+.header-inner, /* ← もしクラス名があればそれに合わせて変更してください */
+header {
+  width: 100%;
+  margin: 0 auto;    /* 左右の余白を自動にして真ん中に寄せる */
+  padding: 0 20px;   /* 画面の端がカツカツにならないように少し余白を入れる */
+  box-sizing: border-box;
+}
