@@ -16,16 +16,16 @@
         <div class="header-container">
             <!-- ロゴ -->
             <h1 class="logo">
-                <a href="https://hi36ro2akxx-pixel.github.io/ponzuuuuuu/"><img src="images/header.png" alt="Atelier"></a>
+                <a href="https://hi36ro2akxx-pixel.github.io/ponzuuuuuu"><img src="images/header.png" alt="Atelier"></a>
             </h1>
             
             <!-- PC用のナビゲーション -->
             <nav class="header-nav">
                 <ul>
-                    <li><a href="https://hi36ro2akxx-pixel.github.io/ponzuuuuuu/contact/index.html" class="header-contact-btn">お問い合わせ <img src="images/mail.png" alt="" class="mail-icon"></a></li>
+                    <li><a href="../contact/index.html" class="header-contact-btn">お問い合わせ <img src="images/mail.png" alt="" class="mail-icon"></a></li>
                 </ul>
             </nav>
-            <a href="https://hi36ro2akxx-pixel.github.io/ponzuuuuuu/contact/index.html" class="header-contact-btn-sp">
+            <a href="../contact/index.html" class="header-contact-btn-sp">
                 お問い合わせ <img src="images/mail.png" alt="" class="mail-icon">
             </a>
             <!-- スマホ用のハンバーガーメニュー（三本線） -->
@@ -39,8 +39,15 @@
         <!-- スマホ用のドロワーメニュー -->
         <div class="sp-menu">
             <div class="sp-menu-content">
-                <a href="contact/index.html" class="sp-menu-contact-btn">
-                    お問い合わせ <img src="images/mail.png" alt="" class="mail-icon">
+                <ul class="sp-menu-list">
+                    <li><a href="../index.html#works">制作実績</a></li>
+                    <!-- もし about.html や skills.html が一番上の階層にあるなら "../about.html" -->
+                    <li><a href="../index.html#about">私について</a></li>
+                    <li><a href="../index.html#skills">スキル＆ツール</a></li>
+                </ul>
+                <!-- お問い合わせが contact フォルダの中にある場合は contact/index.html にする -->
+                <a href="../contact/index.html" class="sp-menu-contact-btn">
+                    お問い合わせ <img src="../images/mail-icon.png" alt="" class="mail-icon">
                 </a>
             </div>
         </div>
@@ -170,43 +177,28 @@
             
             <!-- 作品1 -->
             <div class="work-card">
-                <a href="#">
+                <a href="../transport/index.html">
                     <div class="work-card-img">
-                        <img src="images/web3.png" alt="朱色の幻影">
+                        <img src="images/web2.png" alt="朱色の幻影">
                     </div>
                     <div class="work-card-info">
-                        <p class="work-card-title">朱色の幻影</p>
+                        <p class="work-card-title">トランスポート・ジャパン株式会社</p>
                         <span class="arrow-icon">＞</span>
                     </div>
                 </a>
             </div>
-
-            <!-- 作品2 -->
+<!-- 作品：ペット用ライフスタイルブランドサイト -->
             <div class="work-card">
-                <a href="#">
+                <a href="../pet/index.html">
                     <div class="work-card-img">
-                        <img src="images/web4.png" alt="Melty Nightmare">
+                        <img src="../images/web3.png" alt="ペット用ライフスタイルブランドサイト">
                     </div>
                     <div class="work-card-info">
-                        <p class="work-card-title">Melty Nightmare</p>
+                        <p class="work-card-title">ペット用ライフスタイルブランドサイト</p>
                         <span class="arrow-icon">＞</span>
                     </div>
                 </a>
             </div>
-
-            <!-- 作品3 -->
-            <div class="work-card">
-                <a href="#">
-                    <div class="work-card-img">
-                        <img src="images/web5.png" alt="ミッドナイト・ドール">
-                    </div>
-                    <div class="work-card-info">
-                        <p class="work-card-title">ミッドナイト・ドール</p>
-                        <span class="arrow-icon">＞</span>
-                    </div>
-                </a>
-            </div>
-        </div>
     </section>
     <!-- フッター -->
     <footer class="site-footer">
@@ -214,16 +206,16 @@
         <div class="footer-nav-bg">
             <div class="header-container">
                 <ul class="footer-links">
-                    <li><a href="index.html">制作実績</a></li>
-                    <li><a href="index.html">私について</a></li>
-                    <li><a href="index.html">スキル＆ツール</a></li>
-                    <li><a href="#">お問い合わせ <img src="images/mail.png" alt="" class="footer-mail-icon"></a></li>
+                    <li><a href="../index.works">制作実績</a></li>
+                    <li><a href="../index.sbout">私について</a></li>
+                    <li><a href="../index.skills">スキル＆ツール</a></li>
+                    <li><a href="../contact/index.html">お問い合わせ <img src="images/mail.png" alt="" class="footer-mail-icon"></a></li>
                 </ul>
             </div>
         </div>
         <!-- 一番下のグレーのコピーライト帯 -->
         <div class="footer-copyright">
-            <p>&copy; CopyRight</p>
+            <p>&copy; Anzu Nagashima</p>
         </div>
     </footer>
     <script src="script.js"></script>

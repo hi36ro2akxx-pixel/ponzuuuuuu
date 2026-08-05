@@ -1272,3 +1272,25 @@ html, body {
         margin-top: 45px!important;
     }
 }
+/* ========================================== */
+/* 他の作品を見る セクション */
+/* ========================================== */
+.other-works-section {
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.works-cards-container {
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px; /* カード同士の間隔 */
+    justify-content: center; /* 左右ではなく中央にきれいに並べる */
+}
+
+.work-card {
+    width: 45%; /* 2つ並べる場合に収まりが良い幅に設定 */
+    max-width: 450px;
+    background-color: #ffffff;
+}
