@@ -1,0 +1,1297 @@
+@charset "UTF-8";
+
+/* ========================================== */
+/* ヘッダー全体のスタイル */
+/* ========================================== */
+.site-header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* ロゴのサイズ調整 */
+.logo img {
+    height: 35px;
+    object-fit: contain;
+}
+
+/* ナビゲーションメニューを横並びにする */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+.header-nav a:hover {
+    opacity: 0.7;
+}
+
+/* お問い合わせボタン */
+.header-contact-btn {
+    background-color: #B90F0F;
+    color: #ffffff !important;
+    padding: 10px 20px;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header-contact-btn img.mail-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* ========================================== */
+/* 作品詳細ページ：メインビジュアル（ヒーローエリア） */
+/* ========================================== */
+.detail-hero {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: #B90F0F;
+    background-image: url('images/obi2.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-main-title {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 64px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* ========================================== */
+/* パンくずリスト */
+/* ========================================== */
+.breadcrumb-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #333;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    margin: 0;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================== */
+/* 作品詳細：情報テーブルエリア */
+/* ========================================== */
+.work-info-section {
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.work-info-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.work-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+.work-info-table tr {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.work-info-table th {
+    width: 25%;
+    text-align: left;
+    padding: 24px 16px;
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.work-info-table td {
+    width: 75%;
+    padding: 24px 16px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.8;
+    vertical-align: top;
+}
+
+/* ========================================== */
+/* こだわりポイント セクション */
+/* ========================================== */
+.point-section {
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 60px;
+}
+
+.point-header-banner {
+    width: 100%;
+    max-width: 1120px;
+    height: 96px;
+    margin: 60px auto 40px auto;
+    background-color: #B90F0F;
+    background-image: url('images/obi2.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.point-banner-title {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 400;
+    font-family: 'Post No Bills Colombo', sans-serif;
+    letter-spacing: 2px;
+    margin: 0;
+    text-align: center;
+}
+
+.point-content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.point-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.point-image {
+    width: 50%;
+    flex-shrink: 0;
+}
+
+.point-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.point-text {
+    width: 50%;
+}
+
+.point-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.point-description {
+    font-size: 14px;
+    color: #555555;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ========================================== */
+/* サイトのスクショ セクション */
+/* ========================================== */
+.screenshot-section {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.screenshot-container {
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.screenshot-main {
+    width: 65%;
+}
+
+.screenshot-sub {
+    width: 30%;
+}
+
+.screenshot-container img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================== */
+/* 他の作品を見る セクション */
+/* ========================================== */
+.other-works-section {
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.works-cards-container {
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.work-card {
+    width: calc(33.333% - 20px);
+    background-color: #ffffff;
+}
+
+.work-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.work-card-img img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: block;
+}
+
+.work-card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 4px 0 4px;
+}
+
+.work-card-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    margin: 0;
+}
+
+.arrow-icon {
+    font-size: 14px;
+    color: #666666;
+}
+
+/* ========================================== */
+/* フッター セクション */
+/* ========================================== */
+.site-footer {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.footer-nav-bg {
+    width: 100%;
+    height: 48px;
+    background-color: #B90F0F;
+    background-image: url('images/images/obi.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li a {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links li a:hover {
+    opacity: 0.8;
+}
+
+.footer-mail-icon {
+    width: 16px;
+    height: auto;
+}
+
+.footer-copyright {
+    width: 100%;
+    height: 40px;
+    background-color: #555555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-copyright p {
+    color: #ffffff;
+    font-size: 12px;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* ========================================== */
+/* 全体共通・はみ出し防止 */
+/* ========================================== */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.point-header-banner {
+    width: 92%;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========================================== */
+/* スマホ版ヘッダーのレイアウト・非表示設定 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* PC用ナビゲーションを確実に非表示にする */
+    .header-nav {
+        display: none !important;
+    }
+
+    /* ヘッダー全体を横並びにする */
+    .site-header .header-container {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* ロゴのサイズ調整 */
+    .site-header .logo img {
+        max-height: 30px !important;
+        width: auto !important;
+    }
+
+    /* スマホ用お問い合わせボタンの表示と調整 */
+    .header-contact-btn-sp {
+        display: inline-flex !important;
+        align-items: center !important;
+        background-color: #a81c1c !important;
+        color: #fff !important;
+        padding: 6px 12px !important;
+        font-size: 11px !important;
+        text-decoration: none !important;
+        white-space: nowrap !important;
+        border-radius: 2px !important;
+        margin-left: auto !important;
+        margin-right: 12px !important;
+    }
+    .header-contact-btn-sp img.mail-icon {
+        width: 12px !important;
+        margin-left: 4px !important;
+    }
+
+    /* ハンバーガーメニュー（三本線）の表示設定 */
+    .hamburger-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 24px !important;
+        height: 18px !important;
+        cursor: pointer !important;
+    }
+    .hamburger-menu span {
+        display: block !important;
+        width: 100% !important;
+        height: 2px !important;
+        background-color: #a81c1c !important;
+    }
+}
+
+/* PC表示のときはスマホ用ボタンやハンバーガーを非表示にする */
+@media screen and (min-width: 768px) {
+    .header-contact-btn-sp,
+    .hamburger-menu,
+    .sp-menu {
+        display: none !important;
+    }
+}
+/* ========================================== */
+/* スマホ表示時の不要なPC要素の非表示設定 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* PC用の文字メニューを非表示 */
+    .header-nav {
+        display: none !important;
+    }
+    /* PC用のお問い合わせボタンを非表示 */
+    .pc-only-btn {
+        display: none !important;
+    }
+}
+
+/* PC表示のときはスマホ用要素を非表示 */
+@media screen and (min-width: 768px) {
+    .header-contact-btn-sp,
+    .hamburger-menu,
+    .sp-menu {
+        display: none !important;
+    }
+}
+/* ========================================== */
+/* スマホ用ドロワーメニューを初期状態で隠す設定 */
+/* ========================================== */
+.sp-menu {
+    display: none !important; /* 初期状態では非表示にしておく */
+}
+/* ========================================== */
+/* スマホ版メインビジュアル（ヒーローエリア）の調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    .detail-hero {
+        height: 94px !important; /* Figmaのスマホ版の高さに合わせる */
+    }
+
+    .detail-main-title {
+        font-size: 24px !important; /* スマホに合わせて文字サイズを縮小する */
+        letter-spacing: 1px !important;
+        line-height: 1.3 !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：作品情報セクションの左右23px余白調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* セクション全体に左右23pxの余白を確実に持たせる */
+    .work-info-section {
+        padding-left: 23px !important;
+        padding-right: 23px !important;
+        box-sizing: border-box !important;
+    }
+
+    .work-info-container {
+        width: 100% !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* テーブルも幅100%で綺麗に収める */
+    .work-info-table {
+        display: table !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .work-info-table tr {
+        display: table-row !important;
+    }
+
+    .work-info-table th {
+        display: table-cell !important;
+        width: 32% !important;
+        padding: 16px 8px 16px 0 !important;
+        font-size: 14px !important;
+        vertical-align: top !important;
+    }
+
+    .work-info-table td {
+        display: table-cell !important;
+        width: 68% !important;
+        padding: 16px 0 16px 8px !important;
+        font-size: 13px !important;
+        vertical-align: top !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：パンくずリストの調整（フォント12px・左右余白23px） */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    .breadcrumb-container {
+        padding-left: 23px !important;
+        padding-right: 23px !important;
+        box-sizing: border-box !important;
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .breadcrumb {
+        font-size: 12px !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：タイトルと説明文の上下の幅を41pxにする調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* パンくずリストの余白 */
+    .breadcrumb-container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-sizing: border-box !important;
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .breadcrumb {
+        font-size: 12px !important;
+    }
+
+    /* 作品情報セクション全体 */
+    .work-info-section {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    .work-info-container {
+        width: 100% !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .work-info-table {
+        display: table !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        table-layout: fixed !important;
+    }
+
+    .work-info-table tr {
+        display: table-row !important;
+    }
+
+    /* 左側のタイトル列（上下パディングを約20.5pxにして合計41pxにする） */
+    .work-info-table th {
+        display: table-cell !important;
+        width: 30% !important;
+        padding: 20.5px 4px 20.5px 0 !important;
+        font-size: 14px !important;
+        vertical-align: top !important;
+        word-break: break-all !important;
+    }
+
+    /* 右側の説明文列（上下パディングを約20.5pxにして合計41pxにする） */
+    .work-info-table td {
+        display: table-cell !important;
+        width: 70% !important;
+        padding: 20.5px 0 20.5px 45px !important;
+        font-size: 14px !important;
+        vertical-align: top !important;
+        word-break: break-all !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：「こだわりポイントなど」セクションの縦並び調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* こだわりポイントの各ブロックを縦並びにする */
+    .point-item, 
+    .point-block {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin-bottom: 40px !important;
+    }
+
+    /* スクショ画像（イメージ）の幅と余白を整える */
+    .point-item img, 
+    .point-image {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* テキストの見出しと説明文の幅・余白を整える */
+    .point-item .text-content,
+    .point-text {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：こだわりポイントの見出し（14px＋下線）と説明文（14px）の調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* 小見出しの文字サイズを14pxにし、下線（ボーダー）を追加 */
+    .point-item h3,
+    .point-title {
+        font-size: 14px !important;
+        font-weight: bold !important;
+        border-bottom: 2px solid #557161 !important; /* サンプル画像に合わせた緑色の下線 */
+        padding-bottom: 8px !important;
+        margin-bottom: 16px !important;
+    }
+
+    /* 説明文（本文）の文字サイズを14pxにする */
+    .point-item p,
+    .point-description {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：「こだわりポイントなど」の帯のサイズ調整 (W343 × H38) */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    .point-header-banner {
+        background-image: url('images/obi.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        width: calc(100% - 32px) !important; /* 左右の余白16pxずつを引いた幅 */
+        height: 38px !important;
+        min-height: 38px !important;
+        margin: 0 auto !important; /* 左右中央に配置 */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .point-banner-title {
+        color: #ffffff !important;
+        font-size: 14px !important; /* バナーの高さに合わせて文字サイズも調整 */
+        margin: 0 !important;
+        text-align: center !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：「こだわりポイントなど」の帯のフォント設定 (Post No Bills Colombo / 18px) */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    .point-banner-title {
+        font-family: 'Post No Bills Colombo', sans-serif !important;
+        font-weight: bold !important;
+        font-size: 18px !important;
+        color: #ffffff !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：サイトのスクショ画像を上下に分けて表示する調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* スクロール画像を囲むコンテナを縦並びにする */
+    .screenshot-container {
+        display: flex !important;
+        flex-direction: column !important; /* 上下に配置 */
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+        gap: 24px !important; /* PC版とスマホ版スクショの間の隙間 */
+    }
+
+    /* 各スクショ画像を横幅いっぱいにして綺麗に表示する */
+    .screenshot-main,
+    .screenshot-sub {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .screenshot-main img,
+    .screenshot-sub img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：「他の作品を見る」セクションの枠線をなくす調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    .works-cards-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    .work-card {
+        width: 100% !important;
+        border: none !important; /* 灰色の枠線を消す */
+        background: transparent !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    .work-card a {
+        display: block !important;
+        text-decoration: none !important;
+        color: inherit !important;
+    }
+
+    .work-card-img {
+        width: 100% !important;
+        height: auto !important;
+        border: none !important; /* 画像周りの境界線も消す */
+    }
+
+    .work-card-img img {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+    }
+
+    .work-card-info {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 16px 0 !important; /* 上下のパディングのみ調整 */
+        box-sizing: border-box !important;
+    }
+
+    .work-card-title {
+        font-size: 16px !important;
+        font-weight: bold !important;
+        margin: 0 !important;
+    }
+
+    .arrow-icon {
+        font-size: 20px !important;
+        color: #557161 !important;
+        font-weight: bold !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：フッターのリンクを横並びにする調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    .site-footer {
+        width: 100% !important;
+        margin-top: 60px !important;
+    }
+
+    .footer-nav-bg {
+        width: 100% !important;
+        padding: 15px 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 親コンテナをflexboxで横並び・中央寄せにする */
+    .footer-nav-bg .header-container,
+    .footer-links {
+        display: flex !important;
+        flex-direction: row !important; /* 横並びにする */
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important; /* 万が一入りきらない場合の折り返し */
+        gap: 12px !important; /* 項目同士の間隔 */
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .footer-links li {
+        display: inline-block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        float: none !important;
+    }
+
+    /* フッターのリンク文字サイズを10pxにする */
+    .footer-links li a {
+        display: inline-block !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        font-size: 10px !important;
+        white-space: nowrap !important; /* 文字が勝手に改行されないようにする */
+    }
+
+    .footer-copyright {
+        color: #ffffff !important;
+        text-align: center !important;
+        padding: 10px 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* コピーライトの文字サイズを5pxにする */
+    .footer-copyright p {
+        font-size: 5px !important;
+        margin: 0 !important;
+    }
+}
+/* ========================================== */
+/* ハンバーガーメニューの開閉制御 */
+/* ========================================== */
+/* デフォルトではスマホメニューを非表示にしておく */
+.sp-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* 画面外に隠す */
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+/* activeクラスがついたら画面内にスライドインさせる */
+.sp-menu.active {
+    left: 0;
+}
+
+/* ハンバーガーアイコンがactiveになったときのバツ印変形などの調整（任意） */
+.hamburger-menu.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+/* ========================================== */
+/* スマホ版：ハンバーガーメニュー展開時のスタイル */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* デフォルトではスマホメニューを完全に非表示にする */
+    .sp-menu {
+        display: none !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background-color: #ffffff !important; /* メニューの背景色（必要に応じて変更してください） */
+        z-index: 9999 !important;
+        box-sizing: border-box !important;
+        padding: 80px 20px 20px 20px !important;
+    }
+
+    /* JavaScriptで .active が付いたときに表示する */
+    .sp-menu.active {
+        display: block !important;
+    }
+
+    /* メニュー内のレイアウト調整 */
+    .sp-menu-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .sp-menu-list {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+
+    .sp-menu-list li {
+        margin-bottom: 20px !important;
+    }
+
+    .sp-menu-list li a {
+        text-decoration: none !important;
+        color: #333333 !important;
+        font-size: 18px !important;
+        font-weight: bold !important;
+    }
+}
+/* ========================================== */
+/* スマホ版：ハンバーガーメニュー展開時 ＆ バツ印・左揃えの調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* 1. ハンバーガーメニューがクリックされたときのバツ印（アイコン変化） */
+    .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg) !important;
+    }
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+    .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg) !important;
+    }
+
+    /* 2. ドロワーメニュー全体の展開設定 */
+    .sp-menu {
+        display: none !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background-color: #ffffff !important;
+        z-index: 9999 !important;
+        box-sizing: border-box !important;
+        padding: 80px 24px 40px 24px !important;
+        overflow-y: auto !important;
+    }
+
+    .sp-menu.active {
+        display: block !important;
+    }
+
+    /* 3. メニュー内のコンテンツを「左揃い」にする設定 */
+    .sp-menu-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important; /* 左揃えにする */
+        justify-content: flex-start !important;
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+    }
+
+    /* ロゴ */
+    .sp-menu .logo {
+        margin: 0 0 40px 0 !important;
+        text-align: left !important;
+    }
+    .sp-menu .logo img {
+        width: 120px !important;
+        height: auto !important;
+    }
+
+    /* メニューリスト */
+    .sp-menu-list {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 0 30px 0 !important;
+        width: 100% !important;
+        text-align: left !important; /* 左揃え */
+    }
+
+    .sp-menu-list li {
+        margin-bottom: 24px !important;
+        text-align: left !important;
+    }
+
+    .sp-menu-list li a {
+        text-decoration: none !important;
+        color: #333333 !important;
+        font-size: 16px !important;
+        font-weight: bold !important;
+        display: block !important;
+        text-align: left !important; /* 左揃え */
+    }
+
+    /* 赤いお問い合わせボタン */
+    .sp-menu-contact-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-color: #8E0A0A !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        padding: 12px 24px !important;
+        border-radius: 2px !important;
+        box-sizing: border-box !important;
+    }
+
+    .sp-menu-contact-btn .mail-icon {
+        width: 16px !important;
+        height: auto !important;
+        margin-left: 8px !important;
+    }
+}
+/* ========================================== */
+/* メニュー展開中もバツ印を最前面に常時表示する調整 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    .sp-menu.active ~ .site-header .hamburger-menu,
+    .sp-menu.active .hamburger-menu,
+    body:has(.sp-menu.active) .hamburger-menu {
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+        z-index: 10000 !important;
+        display: block !important;
+    }
+}
+/* ========================================== */
+/* 3本線から完璧なバツ印（❌）を作るCSS */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* ハンバーガーアイコン全体の入れ物 */
+    .hamburger-menu {
+        position: relative !important;
+        width: 30px !important;
+        height: 22px !important;
+        cursor: pointer !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        background: transparent !important;
+        border: none !important;
+        z-index: 10000 !important;
+    }
+
+    /* 3本線の基本スタイル */
+    .hamburger-menu span {
+        display: block !important;
+        width: 100% !important;
+        height: 2px !important;
+        background-color: #333333 !important;
+        transition: all 0.3s ease !important;
+        position: absolute !important;
+        left: 0 !important;
+        border-radius: 2px !important;
+    }
+
+    /* 通常時の3本線の位置（上・中・下） */
+    .hamburger-menu span:nth-child(1) {
+        top: 0px !important;
+    }
+    .hamburger-menu span:nth-child(2) {
+        top: 10px !important; /* ちょうど真ん中 */
+    }
+    .hamburger-menu span:nth-child(3) {
+        top: 20px !important;
+    }
+
+    /* --- クリックされて active になったとき（バツ印に変形） --- */
+
+    /* 1本目の線：真ん中の高さへ移動して右下がりに回転 */
+    .hamburger-menu.active span:nth-child(1) {
+        top: 10px !important;
+        transform: rotate(45deg) !important;
+    }
+
+    /* 2本目の線：完全に透明にして消す */
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0 !important;
+        transform: scale(0) !important;
+    }
+
+    /* 3本目の線：真ん中の高さへ移動して右上がりに回転 */
+    .hamburger-menu.active span:nth-child(3) {
+        top: 10px !important;
+        transform: rotate(-45deg) !important;
+    }
+}
+/* ========================================== */
+/* ヘッダーをFigma通りにスッキリ薄くする完全版 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* ヘッダー全体の上下の余白を完全になくす */
+    header.site-header {
+        padding: 4px 12px !important;
+    }
+
+    header.site-header .header-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* ロゴの大きさを強制的に小さくして高さを詰める */
+    header.site-header .logo {
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 1 !important;
+    }
+    header.site-header .logo img {
+        height: 20px !important; /* Figmaのバランスに合わせて高さを小さく制限 */
+        width: auto !important;
+        display: block !important;
+    }
+
+    /* お問い合わせボタン（SP用）の高さをFigma（約27px）に合わせる */
+    header.site-header .header-contact-btn-sp {
+        height: 27px !important;
+        padding: 0 10px !important;
+        font-size: 11px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+
+    /* ハンバーガーメニューの余白を詰める */
+    header.site-header .hamburger-menu {
+        margin: 0 !important;
+        padding: 5px !important;
+    }
+}
+/* ========================================== */
+/* ヘッダーと下のメイン画像の間に56pxの余白を空ける */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* ヘッダーの下、またはメイン画像の上に56pxのマージンを設定 */
+    header.site-header {
+        margin-bottom: 56px !important;
+    }
+}
+/* ========================================== */
+/* ヘッダーのレイアウトとハンバーガーのサイズ・色の完全修正 */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    /* 1. ヘッダーコンテナのベース設定 */
+    header.site-header .header-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 0 !important;
+    }
+
+    /* 2. ハンバーガーメニューのサイズをFigma（幅30px・高さ24px）に固定 */
+    header.site-header .header-container .hamburger-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 30px !important;   /* Figma通りの幅 */
+        height: 24px !important;  /* Figma通りの高さ */
+        margin: 0 !important;
+        margin-right: 12px !important; /* 画面右端からの余白 */
+        padding: 0 !important;
+        background: transparent !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* ハンバーガーの線の色をFigmaの赤（#8E0A0A）にし、太さを調整 */
+    header.site-header .header-container .hamburger-menu span {
+        display: block !important;
+        width: 100% !important;
+        height: 2px !important;        /* 線の太さ */
+        background-color: #8E0A0A !important; /* 赤色の指定 */
+        margin: 0 !important;
+    }
+
+    /* 3. お問い合わせボタンとハンバーガーの間隔を35pxにする */
+    /* お問い合わせボタンの右側に35pxのマージンを確実に持たせる */
+    header.site-header .header-contact-btn-sp {
+        margin-right: 35px !important;
+        margin-left: auto !important;   /* ロゴとの間を空けて右側に寄せる */
+        flex-shrink: 0 !important;
+    }
+}
+/* ========================================== */
+/* ハンバーガーメニューの右側の余白を16pxにする */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    header.site-header .header-container .hamburger-menu {
+        margin-right: 16px !important; /* 画面右端から16px空ける */
+    }
+}
+/* ========================================== */
+/* スマホ版のヘッダーを上部に固定する */
+/* ========================================== */
+@media screen and (max-width: 767px) {
+    header.site-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important; /* 他の要素より手前に表示する */
+        background-color: #ffffff !important; /* 背景が透明にならないよう白を指定 */
+    }
+
+    /* ヘッダーが固定されて下のコンテンツが隠れないように、メインビジュアルに上の余白を補正する */
+    section.detail-hero,
+    .detail-hero {
+        margin-top: 45px!important;
+    }
+}
+
+/* ========================================== */
+/* 他の作品を見る セクション */
+/* ========================================== */
+.other-works-section {
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.works-cards-container {
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px; /* カード同士の間隔 */
+    justify-content: center; /* 左右ではなく中央にきれいに並べる */
+}
+
+.work-card {
+    width: 45%; /* 2つ並べる場合に収まりが良い幅に設定 */
+    max-width: 450px;
+    background-color: #ffffff;
+}
